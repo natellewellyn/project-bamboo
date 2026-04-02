@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Instructional Grouping Plan — Cedar Valley USD · Spring 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --bg:         #faf8f5;
+  --bg2:        #f3efe9;
+  --text:       #1c1917;
+  --text2:      #57534e;
+  --green:      #2d6a4f;
+  --mid-green:  #52b788;
+  --light-green:#95d5b2;
+  --terracotta: #e76f51;
+  --amber:      #c17b2e;
+  --amber-bg:   #f4a261;
+  --neutral:    #a8a29e;
+  --blue:       #457b9d;
+  --purple:     #7b5ea7;
+  --border:     #e2ddd8;
+  --shadow:     0 2px 12px rgba(28,25,23,.07);
+  --tier-newcomer:  #c0392b;
+  --tier-literacy:  #e76f51;
+  --tier-ontrack:   #c17b2e;
+  --tier-accel:     #52b788;
+  --tier-exit:      #2d6a4f;
+}
+
+*, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.site-header {
+  background: var(--green);
+  color: white;
+  padding: 3.5rem 2rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 110% 50%, #1b4332 0%, transparent 60%);
+}
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+.header-eyebrow {
+  font-size: .8rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  opacity: .7;
+  margin-bottom: .6rem;
+}
+.header-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: .9rem;
+}
+.header-sub {
+  opacity: .8;
+  font-size: 1rem;
+  max-width: 560px;
+}
+.header-meta {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.header-stat { display: flex; flex-direction: column; }
+.header-stat-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.2rem;
+  line-height: 1;
+}
+.header-stat-label {
+  font-size: .78rem;
+  opacity: .7;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-top: .2rem;
+}
+
+.page-body {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.sidebar-nav {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 2.2rem .5rem 3rem 1.5rem;
+  border-right: 1px solid var(--border);
+  scrollbar-width: none;
+}
+.sidebar-nav::-webkit-scrollbar { display: none; }
+.nav-label {
+  font-size: .6rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--neutral);
+  padding: 0 .5rem .8rem;
+  margin-bottom: .2rem;
+  border-bottom: 1px solid var(--border);
+}
+.nav-link {
+  display: flex;
+  align-items: baseline;
+  gap: .45rem;
+  padding: .4rem .5rem;
+  border-radius: 5px;
+  font-size: .78rem;
+  line-height: 1.3;
+  text-decoration: none;
+  color: var(--neutral);
+  transition: color .2s, background .2s;
+}
+.nav-link:hover { color: var(--text); background: var(--bg2); }
+.nav-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: .7rem;
+  opacity: .5;
+  min-width: 1.1rem;
+}
+
+.main-content {
+  max-width: 960px;
+  padding: 3rem 2.5rem 6rem;
+}
+
+.section { margin-bottom: 4rem; }
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: .7rem;
+  margin-bottom: 1.8rem;
+  padding-bottom: .7rem;
+  border-bottom: 2px solid var(--border);
+}
+.section-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5rem;
+  color: var(--green);
+}
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.4rem;
+  color: var(--text);
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.4rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1.2rem;
+}
+.card-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.1rem;
+  margin-bottom: .8rem;
+  color: var(--text);
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.kpi-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.2rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.kpi-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--green);
+}
+.kpi-label {
+  font-size: .75rem;
+  color: var(--text2);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-top: .3rem;
+}
+.kpi-card.accent .kpi-num { color: var(--terracotta); }
+
+.badge {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .03em;
+  padding: .2rem .55rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.badge-risk { background: #c0392b18; color: #c0392b; }
+.badge-ltel { background: #e76f5118; color: #e76f51; }
+.badge-iep  { background: #457b9d18; color: #457b9d; }
+.badge-ok   { background: #2d6a4f14; color: #2d6a4f; }
+
+.insight-box {
+  background: var(--bg2);
+  border-left: 3px solid var(--green);
+  border-radius: 0 8px 8px 0;
+  padding: .9rem 1.2rem;
+  margin: 1rem 0;
+  font-size: .88rem;
+  color: var(--text2);
+}
+.insight-box.warn { border-left-color: var(--terracotta); }
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .page-body { grid-template-columns: 1fr; }
+  .sidebar-nav {
+    position: relative; height: auto; border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 1.5rem; display: flex; flex-wrap: wrap; gap: .2rem .6rem;
+  }
+  .nav-label { width: 100%; border-bottom: none; padding-bottom: .4rem; }
+  .nav-num { display: none; }
+  .two-col { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  .main-content { padding: 2rem 1.2rem 4rem; }
+  .kpi-grid { grid-template-columns: 1fr 1fr; }
+}
+
+
+.student-card {
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.student-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(28,25,23,.12);
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-eyebrow">Cedar Valley Unified School District · EL Program</div>
+    <h1 class="header-title">Instructional Grouping Plan</h1>
+    <p class="header-sub">Class-level tier assignments based on ACCESS proficiency, growth trajectory, RISE performance, and classroom grades. Spring 2026.</p>
+    <div class="header-meta">
+      <div class="header-stat"><span class="header-stat-num">22</span><span class="header-stat-label">EL Students</span></div>
+      <div class="header-stat"><span class="header-stat-num">5</span><span class="header-stat-label">Tiers</span></div>
+      <div class="header-stat"><span class="header-stat-num">3.33</span><span class="header-stat-label">Avg Composite</span></div>
+      <div class="header-stat"><span class="header-stat-num">6</span><span class="header-stat-label">LTEL</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="page-body">
+  <nav class="sidebar-nav">
+    <div class="nav-label">Sections</div>
+<a class="nav-link" href="#overview"><span class="nav-num">0</span> Cohort Overview</a>
+<a class="nav-link" href="#exit_ready"><span class="nav-num">1</span> Exit-Ready (2)</a>
+<a class="nav-link" href="#newcomer"><span class="nav-num">2</span> Newcomer Intensive (4)</a>
+<a class="nav-link" href="#developing_literacy"><span class="nav-num">3</span> Developing — Literacy Gap (5)</a>
+<a class="nav-link" href="#developing_ontrack"><span class="nav-num">4</span> Developing — On Track (7)</a>
+<a class="nav-link" href="#accelerating"><span class="nav-num">5</span> Accelerating (4)</a>
+
+  </nav>
+  <main class="main-content">
+
+    <div class="section" id="overview">
+      <div class="section-head">
+        <span class="section-num">0</span>
+        <span class="section-title">Cohort Overview</span>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card"><div class="kpi-num">3.48</div><div class="kpi-label">Avg Listening</div></div>
+        <div class="kpi-card"><div class="kpi-num">3.69</div><div class="kpi-label">Avg Speaking</div></div>
+        <div class="kpi-card"><div class="kpi-num">3.19</div><div class="kpi-label">Avg Reading</div></div>
+        <div class="kpi-card accent"><div class="kpi-num">2.98</div><div class="kpi-label">Avg Writing</div></div>
+      </div>
+
+      <div class="two-col">
+        <div class="card">
+          <div class="card-title">Cohort Modality Profile</div>
+          <p style="font-size:.82rem;color:var(--text2);margin-bottom:.4rem">Average ACCESS scores across all 22 students. Each axis represents one language modality on a 0–6 scale. A perfectly balanced student would form a symmetrical diamond.</p>
+          <svg viewBox="0 0 370 370" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:370px;font-family:'DM Sans',sans-serif">
+<polygon points="185.0,144.3 225.7,185.0 185.0,225.7 144.3,185.0" fill="#f5f2ee" stroke="#e2ddd8" stroke-width="0.8"/>
+<polygon points="185.0,103.7 266.3,185.0 185.0,266.3 103.7,185.0" fill="none" stroke="#e2ddd8" stroke-width="0.8"/>
+<polygon points="185.0,63.0 307.0,185.0 185.0,307.0 63.0,185.0" fill="none" stroke="#e2ddd8" stroke-width="0.8"/>
+<polygon points="185.0,164.7 205.3,185.0 185.0,205.3 164.7,185.0" fill="none" stroke="#ece8e3" stroke-width="0.5" stroke-dasharray="3 3"/>
+<polygon points="185.0,124.0 246.0,185.0 185.0,246.0 124.0,185.0" fill="none" stroke="#ece8e3" stroke-width="0.5" stroke-dasharray="3 3"/>
+<polygon points="185.0,83.3 286.7,185.0 185.0,286.7 83.3,185.0" fill="none" stroke="#ece8e3" stroke-width="0.5" stroke-dasharray="3 3"/>
+<line x1="185.0" y1="185.0" x2="185.0" y2="63.0" stroke="#457b9d" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="185.0" y1="185.0" x2="307.0" y2="185.0" stroke="#2d6a4f" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="185.0" y1="185.0" x2="185.0" y2="307.0" stroke="#7b5ea7" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="185.0" y1="185.0" x2="63.0" y2="185.0" stroke="#e76f51" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="216.8" y="153.2" dy="0" font-size="8.5" fill="#a8a29e" font-weight="normal" text-anchor="start">2</text>
+<text x="245.5" y="124.5" dy="0" font-size="8.5" fill="#a8a29e" font-weight="normal" text-anchor="start">4</text>
+<text x="274.3" y="95.7" dy="0" font-size="8.5" fill="#a8a29e" font-weight="normal" text-anchor="start">6</text>
+<polygon points="185.0,114.2 260.0,185.0 185.0,249.9 124.4,185.0" fill="#2d6a4f" fill-opacity="0.12" stroke="#2d6a4f" stroke-width="2.5"/>
+<circle cx="185.0" cy="114.2" r="5" fill="white" stroke="#457b9d" stroke-width="2.5"/>
+<text x="185.0" y="100.2" dy="0" font-size="12" fill="#457b9d" font-weight="700" text-anchor="middle">3.5</text>
+<circle cx="260.0" cy="185.0" r="5" fill="white" stroke="#2d6a4f" stroke-width="2.5"/>
+<text x="274.0" y="190.0" dy="0" font-size="12" fill="#2d6a4f" font-weight="700" text-anchor="start">3.7</text>
+<circle cx="185.0" cy="249.9" r="5" fill="white" stroke="#7b5ea7" stroke-width="2.5"/>
+<text x="185.0" y="267.9" dy="0" font-size="12" fill="#7b5ea7" font-weight="700" text-anchor="middle">3.2</text>
+<circle cx="124.4" cy="185.0" r="5" fill="white" stroke="#e76f51" stroke-width="2.5"/>
+<text x="110.4" y="190.0" dy="0" font-size="12" fill="#e76f51" font-weight="700" text-anchor="end">3.0</text>
+<text x="185.0" y="24.8" dy="4" font-size="12" fill="#457b9d" font-weight="600" text-anchor="middle">Listening</text>
+<text x="345.2" y="185.0" dy="4" font-size="12" fill="#2d6a4f" font-weight="600" text-anchor="middle">Speaking</text>
+<text x="185.0" y="350.8" dy="4" font-size="12" fill="#7b5ea7" font-weight="600" text-anchor="middle">Reading</text>
+<text x="24.8" y="185.0" dy="4" font-size="12" fill="#e76f51" font-weight="600" text-anchor="middle">Writing</text>
+<text x="24.75" y="207.0" font-size="10" fill="#e76f51" text-anchor="middle" font-weight="600" font-style="italic">Writing is weakest</text>
+</svg>
+        </div>
+        <div class="card">
+          <div class="card-title">Tier Distribution</div>
+          <p style="font-size:.82rem;color:var(--text2);margin-bottom:.8rem">Ordered by proficiency level, lowest → highest. Each bar shows the share of the 22-student caseload.</p>
+          <div style="margin-top:.5rem">
+            <div style="margin-bottom:1rem">
+      <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.3rem">
+        <div style="width:10px;height:10px;border-radius:3px;background:#c0392b;flex-shrink:0"></div>
+        <div style="font-size:.88rem;font-weight:600">Newcomer Intensive</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:#c0392b;margin-left:auto">4</div>
+        <div style="font-size:.78rem;color:var(--text2);min-width:32px">(18%)</div>
+      </div>
+      <div style="height:10px;background:#e8e4df;border-radius:5px;overflow:hidden;margin-bottom:.3rem">
+        <div style="width:18%;height:100%;background:#c0392b;border-radius:5px;transition:width .3s"></div>
+      </div>
+      <div style="font-size:.75rem;color:var(--neutral);padding-left:16px">Amina, Omar, Yusuf, Aisha</div>
+    </div><div style="margin-bottom:1rem">
+      <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.3rem">
+        <div style="width:10px;height:10px;border-radius:3px;background:#e76f51;flex-shrink:0"></div>
+        <div style="font-size:.88rem;font-weight:600">Developing — Literacy Gap</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:#e76f51;margin-left:auto">5</div>
+        <div style="font-size:.78rem;color:var(--text2);min-width:32px">(23%)</div>
+      </div>
+      <div style="height:10px;background:#e8e4df;border-radius:5px;overflow:hidden;margin-bottom:.3rem">
+        <div style="width:23%;height:100%;background:#e76f51;border-radius:5px;transition:width .3s"></div>
+      </div>
+      <div style="font-size:.75rem;color:var(--neutral);padding-left:16px">Jose, Carlos, Tala, Marco, Fusi</div>
+    </div><div style="margin-bottom:1rem">
+      <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.3rem">
+        <div style="width:10px;height:10px;border-radius:3px;background:#c17b2e;flex-shrink:0"></div>
+        <div style="font-size:.88rem;font-weight:600">Developing — On Track</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:#c17b2e;margin-left:auto">7</div>
+        <div style="font-size:.78rem;color:var(--text2);min-width:32px">(32%)</div>
+      </div>
+      <div style="height:10px;background:#e8e4df;border-radius:5px;overflow:hidden;margin-bottom:.3rem">
+        <div style="width:32%;height:100%;background:#c17b2e;border-radius:5px;transition:width .3s"></div>
+      </div>
+      <div style="font-size:.75rem;color:var(--neutral);padding-left:16px">Sione, Fatima, Lupe, Mele, Halima, Sina, Pablo</div>
+    </div><div style="margin-bottom:1rem">
+      <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.3rem">
+        <div style="width:10px;height:10px;border-radius:3px;background:#52b788;flex-shrink:0"></div>
+        <div style="font-size:.88rem;font-weight:600">Accelerating</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:#52b788;margin-left:auto">4</div>
+        <div style="font-size:.78rem;color:var(--text2);min-width:32px">(18%)</div>
+      </div>
+      <div style="height:10px;background:#e8e4df;border-radius:5px;overflow:hidden;margin-bottom:.3rem">
+        <div style="width:18%;height:100%;background:#52b788;border-radius:5px;transition:width .3s"></div>
+      </div>
+      <div style="font-size:.75rem;color:var(--neutral);padding-left:16px">Maria, Ana, Diego, Miguel</div>
+    </div><div style="margin-bottom:1rem">
+      <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.3rem">
+        <div style="width:10px;height:10px;border-radius:3px;background:#2d6a4f;flex-shrink:0"></div>
+        <div style="font-size:.88rem;font-weight:600">Exit-Ready</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:#2d6a4f;margin-left:auto">2</div>
+        <div style="font-size:.78rem;color:var(--text2);min-width:32px">(9%)</div>
+      </div>
+      <div style="height:10px;background:#e8e4df;border-radius:5px;overflow:hidden;margin-bottom:.3rem">
+        <div style="width:9%;height:100%;background:#2d6a4f;border-radius:5px;transition:width .3s"></div>
+      </div>
+      <div style="font-size:.75rem;color:var(--neutral);padding-left:16px">Rosa, Layla</div>
+    </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-box" style="margin-top:1.5rem">
+        <strong>Key finding:</strong> Writing is the weakest domain cohort-wide (avg 2.98), trailing Listening (3.48) by 0.5 points.
+        However, individual students have different profiles — modality-specific intervention is more effective than blanket Writing instruction.
+      </div>
+    </div>
+
+    
+        <div class="section" id="exit_ready">
+          <div class="section-head">
+            <span class="section-num" style="color:#2d6a4f">1</span>
+            <span class="section-title">Exit-Ready</span>
+            <span class="badge" style="background:#2d6a4f18;color:#2d6a4f;margin-left:auto">2 students</span>
+          </div>
+
+          <div class="card" style="border-left:4px solid #2d6a4f;margin-bottom:1.5rem">
+            <div class="card-title" style="color:#2d6a4f">Exit-Ready — Instructional Focus</div>
+            <p style="font-size:.9rem;color:var(--text2);margin-bottom:.8rem">Approaching or meeting Utah reclassification criteria. Composite ≥ 4.4, RISE proficient in at least one subject, GPA ≥ 3.0.</p>
+            <div style="font-size:.85rem;font-weight:600;margin-bottom:.3rem">Focus: Reclassification prep, monitor in mainstream classes, build academic independence, reduce pull-out time.</div>
+            <ul style="font-size:.85rem;color:var(--text2);padding-left:1.2rem;margin-top:.5rem"><li style="margin-bottom:.3rem">Transition to mainstream content with light language monitoring</li><li style="margin-bottom:.3rem">Academic vocabulary in grade-level texts without simplification</li><li style="margin-bottom:.3rem">Self-advocacy skills for requesting clarification independently</li><li style="margin-bottom:.3rem">Reclassification portfolio preparation</li></ul>
+          </div>
+
+          <div class="two-col" style="margin-bottom:1.5rem">
+            <div>
+              <div style="font-size:.85rem;font-weight:600;margin-bottom:.6rem;color:var(--text2);text-transform:uppercase;letter-spacing:.05em">Tier Modality Profile</div>
+              <svg viewBox="0 0 330 330" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:330px;font-family:'DM Sans',sans-serif">
+<polygon points="165.0,131.0 199.0,165.0 165.0,199.0 131.0,165.0" fill="#f5f2ee" stroke="#e2ddd8" stroke-width="0.8"/>
+<polygon points="165.0,97.0 233.0,165.0 165.0,233.0 97.0,165.0" fill="none" stroke="#e2ddd8" stroke-width="0.8"/>
+<polygon points="165.0,63.0 267.0,165.0 165.0,267.0 63.0,165.0" fill="none" stroke="#e2ddd8" stroke-width="0.8"/>
+<polygon points="165.0,148.0 182.0,165.0 165.0,182.0 148.0,165.0" fill="none" stroke="#ece8e3" stroke-width="0.5" stroke-dasharray="3 3"/>
+<polygon points="165.0,114.0 216.0,165.0 165.0,216.0 114.0,165.0" fill="none" stroke="#ece8e3" stroke-width="0.5" stroke-dasharray="3 3"/>
+<polygon points="165.0,80.0 250.0,165.0 165.0,250.0 80.0,165.0" fill="none" stroke="#ece8e3" stroke-width="0.5" stroke-dasharray="3 3"/>
+<line x1="165.0" y1="165.0" x2="165.0" y2="63.0" stroke="#457b9d" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="165.0" y1="165.0" x2="267.0" y2="165.0" stroke="#2d6a4f" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="165.0" y1="165.0" x2="165.0" y2="267.0" stroke="#7b5ea7" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="165.0" y1="165.0" x2="63.0" y2="165.0" stroke="#e76f51" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="192.0" y="138.0" dy="0" font-size="8.5" fill="#a8a29e" font-weight="normal" text-anchor="start">2</text>
+<text x="216.1" y="113.9" dy="0" font-size="8.5" fill="#a8a29e" font-weight="normal" text-anchor="start">4</text>
+<text x="240.1" y="89.9" dy="0" font-size="8.5" fill="#a8a29e" font-weight="normal" text-anchor="start">6</text>
+<polygon points="165.0,87.7 245.8,165.0 165.0,238.9 94.4,165.0" fill="#2d6a4f" fill-opacity="0.12" stroke="#2d6a4f" stroke-width="2.5"/>
+<circle cx="165.0" cy="87.7" r="5" fill="white" stroke="#457b9d" stroke-width="2.5"/>
+<text x="165.0" y="73.7" dy="0" font-size="12" fill="#457b9d" font-weight="700" text-anchor="middle">4.5</text>
+<circle cx="245.8" cy="165.0" r="5" fill="white" stroke="#2d6a4f" stroke-width="2.5"/>
+<text x="259.8" y="170.0" dy="0" font-size="12" fill="#2d6a4f" font-weight="700" text-anchor="start">4.8</text>
+<circle cx="165.0" cy="238.9" r="5" fill="white" stroke="#7b5ea7" stroke-width="2.5"/>
+<text x="165.0" y="256.9" dy="0" font-size="12" fill="#7b5ea7" font-weight="700" text-anchor="middle">4.3</text>
+<circle cx="94.4" cy="165.0" r="5" fill="white" stroke="#e76f51" stroke-width="2.5"/>
+<text x="80.4" y="170.0" dy="0" font-size="12" fill="#e76f51" font-weight="700" text-anchor="end">4.2</text>
+<text x="165.0" y="24.8" dy="4" font-size="12" fill="#457b9d" font-weight="600" text-anchor="middle">Listening</text>
+<text x="305.2" y="165.0" dy="4" font-size="12" fill="#2d6a4f" font-weight="600" text-anchor="middle">Speaking</text>
+<text x="165.0" y="310.8" dy="4" font-size="12" fill="#7b5ea7" font-weight="600" text-anchor="middle">Reading</text>
+<text x="24.8" y="165.0" dy="4" font-size="12" fill="#e76f51" font-weight="600" text-anchor="middle">Writing</text>
+</svg>
+            </div>
+            <div>
+              <div style="font-size:.85rem;font-weight:600;margin-bottom:.6rem;color:var(--text2);text-transform:uppercase;letter-spacing:.05em">Student Roster</div>
+              <table style="width:100%;font-size:.82rem;border-collapse:collapse">
+                <tr style="border-bottom:1px solid var(--border)">
+                  <th style="text-align:left;padding:.3rem .4rem;color:var(--text2);font-weight:600">Name</th>
+                  <th style="text-align:center;padding:.3rem .2rem;color:var(--text2);font-weight:600">Comp.</th>
+                  <th style="text-align:center;padding:.3rem .2rem;color:var(--text2);font-weight:600">Growth</th>
+                  <th style="text-align:center;padding:.3rem .2rem;color:var(--text2);font-weight:600">GPA</th>
+                </tr>
+                <tr style="border-bottom:1px solid #f0ece7">
+      <td style="padding:.3rem .4rem;font-weight:500">Rosa H.</td>
+      <td style="text-align:center;padding:.3rem .2rem">4.4</td>
+      <td style="text-align:center;padding:.3rem .2rem;color:var(--green)">+0.50</td>
+      <td style="text-align:center;padding:.3rem .2rem">3.0</td>
+    </tr><tr style="border-bottom:1px solid #f0ece7">
+      <td style="padding:.3rem .4rem;font-weight:500">Layla K.</td>
+      <td style="text-align:center;padding:.3rem .2rem">4.5</td>
+      <td style="text-align:center;padding:.3rem .2rem;color:var(--green)">+0.50</td>
+      <td style="text-align:center;padding:.3rem .2rem">3.2</td>
+    </tr>
+              </table>
+            </div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem">
+            
+            <div class="card student-card" style="border-top: 3px solid #2d6a4f">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
+                <div>
+                  <div style="font-weight:600;font-size:1rem">Rosa Hernandez</div>
+                  <div style="font-size:.78rem;color:var(--text2)">Valley Ridge Elementary · Grade 5 · Spanish</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#2d6a4f">4.4</div>
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase">Composite</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.5rem">
+                <div style="flex:1"><svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:180px;font-family:'DM Sans',sans-serif">
+<text x="0.0" y="10.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">L</text>
+<rect x="14.0" y="2.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="2.0" width="102.0" height="9.0" rx="4" fill="#457b9d" opacity="0.85"/>
+<text x="120.0" y="10.0" dy="0" font-size="9" fill="#457b9d" font-weight="600" text-anchor="start">4.5</text>
+<text x="0.0" y="25.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">S</text>
+<rect x="14.0" y="17.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="17.0" width="106.5" height="9.0" rx="4" fill="#2d6a4f" opacity="0.85"/>
+<text x="124.5" y="25.0" dy="0" font-size="9" fill="#2d6a4f" font-weight="600" text-anchor="start">4.7</text>
+<text x="0.0" y="40.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">R</text>
+<rect x="14.0" y="32.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="32.0" width="97.5" height="9.0" rx="4" fill="#7b5ea7" opacity="0.85"/>
+<text x="115.5" y="40.0" dy="0" font-size="9" fill="#7b5ea7" font-weight="600" text-anchor="start">4.3</text>
+<text x="0.0" y="55.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">W</text>
+<rect x="14.0" y="47.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="47.0" width="92.9" height="9.0" rx="4" fill="#e76f51" opacity="0.85"/>
+<text x="110.9" y="55.0" dy="0" font-size="9" fill="#e76f51" font-weight="600" text-anchor="start">4.1</text>
+</svg></div>
+                <div style="text-align:center;min-width:60px">
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase;margin-bottom:.2rem">Growth</div>
+                  <span style="font-size:.85rem;font-weight:600;color:var(--green)">+0.50</span>
+                  <div style="font-size:.7rem;color:var(--text2);margin-top:.2rem">GPA 3.0</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:.3rem;flex-wrap:wrap"></div>
+              
+            </div>
+            
+            <div class="card student-card" style="border-top: 3px solid #2d6a4f">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
+                <div>
+                  <div style="font-weight:600;font-size:1rem">Layla Khalil</div>
+                  <div style="font-size:.78rem;color:var(--text2)">Pioneer Middle School · Grade 6 · Arabic</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#2d6a4f">4.5</div>
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase">Composite</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.5rem">
+                <div style="flex:1"><svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:180px;font-family:'DM Sans',sans-serif">
+<text x="0.0" y="10.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">L</text>
+<rect x="14.0" y="2.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="2.0" width="104.3" height="9.0" rx="4" fill="#457b9d" opacity="0.85"/>
+<text x="122.3" y="10.0" dy="0" font-size="9" fill="#457b9d" font-weight="600" text-anchor="start">4.6</text>
+<text x="0.0" y="25.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">S</text>
+<rect x="14.0" y="17.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="17.0" width="108.8" height="9.0" rx="4" fill="#2d6a4f" opacity="0.85"/>
+<text x="126.8" y="25.0" dy="0" font-size="9" fill="#2d6a4f" font-weight="600" text-anchor="start">4.8</text>
+<text x="0.0" y="40.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">R</text>
+<rect x="14.0" y="32.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="32.0" width="99.7" height="9.0" rx="4" fill="#7b5ea7" opacity="0.85"/>
+<text x="117.7" y="40.0" dy="0" font-size="9" fill="#7b5ea7" font-weight="600" text-anchor="start">4.4</text>
+<text x="0.0" y="55.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">W</text>
+<rect x="14.0" y="47.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="47.0" width="95.2" height="9.0" rx="4" fill="#e76f51" opacity="0.85"/>
+<text x="113.2" y="55.0" dy="0" font-size="9" fill="#e76f51" font-weight="600" text-anchor="start">4.2</text>
+</svg></div>
+                <div style="text-align:center;min-width:60px">
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase;margin-bottom:.2rem">Growth</div>
+                  <span style="font-size:.85rem;font-weight:600;color:var(--green)">+0.50</span>
+                  <div style="font-size:.7rem;color:var(--text2);margin-top:.2rem">GPA 3.2</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:.3rem;flex-wrap:wrap"></div>
+              
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="section" id="newcomer">
+          <div class="section-head">
+            <span class="section-num" style="color:#c0392b">2</span>
+            <span class="section-title">Newcomer Intensive</span>
+            <span class="badge" style="background:#c0392b18;color:#c0392b;margin-left:auto">4 students</span>
+          </div>
+
+          <div class="card" style="border-left:4px solid #c0392b;margin-bottom:1.5rem">
+            <div class="card-title" style="color:#c0392b">Newcomer Intensive — Instructional Focus</div>
+            <p style="font-size:.9rem;color:var(--text2);margin-bottom:.8rem">Recently arrived students with composite &lt; 2.2 and significant academic gaps. GPA below 1.0, often with high absences.</p>
+            <div style="font-size:.85rem;font-weight:600;margin-bottom:.3rem">Focus: Survival English, L1 scaffolding, family engagement, building foundational literacy and school routines.</div>
+            <ul style="font-size:.85rem;color:var(--text2);padding-left:1.2rem;margin-top:.5rem"><li style="margin-bottom:.3rem">L1 scaffolding — use home language for concept introduction</li><li style="margin-bottom:.3rem">Visual supports, realia, and Total Physical Response (TPR)</li><li style="margin-bottom:.3rem">Survival vocabulary: school routines, social phrases, content essentials</li><li style="margin-bottom:.3rem">Family engagement in home language — translated communication</li><li style="margin-bottom:.3rem">Buddy system with bilingual peers</li></ul>
+          </div>
+
+          <div class="two-col" style="margin-bottom:1.5rem">
+            <div>
+              <div style="font-size:.85rem;font-weight:600;margin-bottom:.6rem;color:var(--text2);text-transform:uppercase;letter-spacing:.05em">Tier Modality Profile</div>
+              <svg viewBox="0 0 330 330" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:330px;font-family:'DM Sans',sans-serif">
+<polygon points="165.0,131.0 199.0,165.0 165.0,199.0 131.0,165.0" fill="#f5f2ee" stroke="#e2ddd8" stroke-width="0.8"/>
+<polygon points="165.0,97.0 233.0,165.0 165.0,233.0 97.0,165.0" fill="none" stroke="#e2ddd8" stroke-width="0.8"/>
+<polygon points="165.0,63.0 267.0,165.0 165.0,267.0 63.0,165.0" fill="none" stroke="#e2ddd8" stroke-width="0.8"/>
+<polygon points="165.0,148.0 182.0,165.0 165.0,182.0 148.0,165.0" fill="none" stroke="#ece8e3" stroke-width="0.5" stroke-dasharray="3 3"/>
+<polygon points="165.0,114.0 216.0,165.0 165.0,216.0 114.0,165.0" fill="none" stroke="#ece8e3" stroke-width="0.5" stroke-dasharray="3 3"/>
+<polygon points="165.0,80.0 250.0,165.0 165.0,250.0 80.0,165.0" fill="none" stroke="#ece8e3" stroke-width="0.5" stroke-dasharray="3 3"/>
+<line x1="165.0" y1="165.0" x2="165.0" y2="63.0" stroke="#457b9d" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="165.0" y1="165.0" x2="267.0" y2="165.0" stroke="#2d6a4f" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="165.0" y1="165.0" x2="165.0" y2="267.0" stroke="#7b5ea7" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="165.0" y1="165.0" x2="63.0" y2="165.0" stroke="#e76f51" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="192.0" y="138.0" dy="0" font-size="8.5" fill="#a8a29e" font-weight="normal" text-anchor="start">2</text>
+<text x="216.1" y="113.9" dy="0" font-size="8.5" fill="#a8a29e" font-weight="normal" text-anchor="start">4</text>
+<text x="240.1" y="89.9" dy="0" font-size="8.5" fill="#a8a29e" font-weight="normal" text-anchor="start">6</text>
+<polygon points="165.0,130.2 202.9,165.0 165.0,193.6 139.5,165.0" fill="#c0392b" fill-opacity="0.12" stroke="#c0392b" stroke-width="2.5"/>
+<circle cx="165.0" cy="130.2" r="5" fill="white" stroke="#457b9d" stroke-width="2.5"/>
+<text x="165.0" y="116.2" dy="0" font-size="12" fill="#457b9d" font-weight="700" text-anchor="middle">2.0</text>
+<circle cx="202.9" cy="165.0" r="5" fill="white" stroke="#2d6a4f" stroke-width="2.5"/>
+<text x="216.9" y="170.0" dy="0" font-size="12" fill="#2d6a4f" font-weight="700" text-anchor="start">2.2</text>
+<circle cx="165.0" cy="193.6" r="5" fill="white" stroke="#7b5ea7" stroke-width="2.5"/>
+<text x="165.0" y="211.6" dy="0" font-size="12" fill="#7b5ea7" font-weight="700" text-anchor="middle">1.7</text>
+<circle cx="139.5" cy="165.0" r="5" fill="white" stroke="#e76f51" stroke-width="2.5"/>
+<text x="125.5" y="170.0" dy="0" font-size="12" fill="#e76f51" font-weight="700" text-anchor="end">1.5</text>
+<text x="165.0" y="24.8" dy="4" font-size="12" fill="#457b9d" font-weight="600" text-anchor="middle">Listening</text>
+<text x="305.2" y="165.0" dy="4" font-size="12" fill="#2d6a4f" font-weight="600" text-anchor="middle">Speaking</text>
+<text x="165.0" y="310.8" dy="4" font-size="12" fill="#7b5ea7" font-weight="600" text-anchor="middle">Reading</text>
+<text x="24.8" y="165.0" dy="4" font-size="12" fill="#e76f51" font-weight="600" text-anchor="middle">Writing</text>
+</svg>
+            </div>
+            <div>
+              <div style="font-size:.85rem;font-weight:600;margin-bottom:.6rem;color:var(--text2);text-transform:uppercase;letter-spacing:.05em">Student Roster</div>
+              <table style="width:100%;font-size:.82rem;border-collapse:collapse">
+                <tr style="border-bottom:1px solid var(--border)">
+                  <th style="text-align:left;padding:.3rem .4rem;color:var(--text2);font-weight:600">Name</th>
+                  <th style="text-align:center;padding:.3rem .2rem;color:var(--text2);font-weight:600">Comp.</th>
+                  <th style="text-align:center;padding:.3rem .2rem;color:var(--text2);font-weight:600">Growth</th>
+                  <th style="text-align:center;padding:.3rem .2rem;color:var(--text2);font-weight:600">GPA</th>
+                </tr>
+                <tr style="border-bottom:1px solid #f0ece7">
+      <td style="padding:.3rem .4rem;font-weight:500">Amina H.</td>
+      <td style="text-align:center;padding:.3rem .2rem">1.9</td>
+      <td style="text-align:center;padding:.3rem .2rem;color:var(--neutral)">—</td>
+      <td style="text-align:center;padding:.3rem .2rem">0.2</td>
+    </tr><tr style="border-bottom:1px solid #f0ece7">
+      <td style="padding:.3rem .4rem;font-weight:500">Omar M.</td>
+      <td style="text-align:center;padding:.3rem .2rem">1.7</td>
+      <td style="text-align:center;padding:.3rem .2rem;color:var(--neutral)">—</td>
+      <td style="text-align:center;padding:.3rem .2rem">—</td>
+    </tr><tr style="border-bottom:1px solid #f0ece7">
+      <td style="padding:.3rem .4rem;font-weight:500">Yusuf A.</td>
+      <td style="text-align:center;padding:.3rem .2rem">1.6</td>
+      <td style="text-align:center;padding:.3rem .2rem;color:var(--neutral)">—</td>
+      <td style="text-align:center;padding:.3rem .2rem">—</td>
+    </tr><tr style="border-bottom:1px solid #f0ece7">
+      <td style="padding:.3rem .4rem;font-weight:500">Aisha N.</td>
+      <td style="text-align:center;padding:.3rem .2rem">2.2</td>
+      <td style="text-align:center;padding:.3rem .2rem;color:var(--neutral)">—</td>
+      <td style="text-align:center;padding:.3rem .2rem">0.5</td>
+    </tr>
+              </table>
+            </div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem">
+            
+            <div class="card student-card" style="border-top: 3px solid #c0392b">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
+                <div>
+                  <div style="font-weight:600;font-size:1rem">Amina Hassan</div>
+                  <div style="font-size:.78rem;color:var(--text2)">Lakeshore Elementary · Grade 2 · Somali</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#c0392b">1.9</div>
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase">Composite</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.5rem">
+                <div style="flex:1"><svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:180px;font-family:'DM Sans',sans-serif">
+<text x="0.0" y="10.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">L</text>
+<rect x="14.0" y="2.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="2.0" width="47.6" height="9.0" rx="4" fill="#457b9d" opacity="0.85"/>
+<text x="65.6" y="10.0" dy="0" font-size="9" fill="#457b9d" font-weight="600" text-anchor="start">2.1</text>
+<text x="0.0" y="25.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">S</text>
+<rect x="14.0" y="17.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="17.0" width="52.1" height="9.0" rx="4" fill="#2d6a4f" opacity="0.85"/>
+<text x="70.1" y="25.0" dy="0" font-size="9" fill="#2d6a4f" font-weight="600" text-anchor="start">2.3</text>
+<text x="0.0" y="40.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">R</text>
+<rect x="14.0" y="32.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="32.0" width="40.8" height="9.0" rx="4" fill="#7b5ea7" opacity="0.85"/>
+<text x="58.8" y="40.0" dy="0" font-size="9" fill="#7b5ea7" font-weight="600" text-anchor="start">1.8</text>
+<text x="0.0" y="55.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">W</text>
+<rect x="14.0" y="47.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="47.0" width="36.3" height="9.0" rx="4" fill="#e76f51" opacity="0.85"/>
+<text x="54.3" y="55.0" dy="0" font-size="9" fill="#e76f51" font-weight="600" text-anchor="start">1.6</text>
+</svg></div>
+                <div style="text-align:center;min-width:60px">
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase;margin-bottom:.2rem">Growth</div>
+                  <span style="font-size:.78rem;color:var(--neutral)">Year 1</span>
+                  <div style="font-size:.7rem;color:var(--text2);margin-top:.2rem">GPA 0.2</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:.3rem;flex-wrap:wrap"><span class="badge badge-risk">Very Low ACCESS</span> <span class="badge badge-risk">Low GPA</span> <span class="badge badge-iep">IEP</span> </div>
+              
+            </div>
+            
+            <div class="card student-card" style="border-top: 3px solid #c0392b">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
+                <div>
+                  <div style="font-weight:600;font-size:1rem">Omar Mohamed</div>
+                  <div style="font-size:.78rem;color:var(--text2)">Lakeshore Elementary · Grade 4 · Somali</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#c0392b">1.7</div>
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase">Composite</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.5rem">
+                <div style="flex:1"><svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:180px;font-family:'DM Sans',sans-serif">
+<text x="0.0" y="10.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">L</text>
+<rect x="14.0" y="2.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="2.0" width="43.1" height="9.0" rx="4" fill="#457b9d" opacity="0.85"/>
+<text x="61.1" y="10.0" dy="0" font-size="9" fill="#457b9d" font-weight="600" text-anchor="start">1.9</text>
+<text x="0.0" y="25.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">S</text>
+<rect x="14.0" y="17.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="17.0" width="45.3" height="9.0" rx="4" fill="#2d6a4f" opacity="0.85"/>
+<text x="63.3" y="25.0" dy="0" font-size="9" fill="#2d6a4f" font-weight="600" text-anchor="start">2.0</text>
+<text x="0.0" y="40.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">R</text>
+<rect x="14.0" y="32.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="32.0" width="34.0" height="9.0" rx="4" fill="#7b5ea7" opacity="0.85"/>
+<text x="52.0" y="40.0" dy="0" font-size="9" fill="#7b5ea7" font-weight="600" text-anchor="start">1.5</text>
+<text x="0.0" y="55.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">W</text>
+<rect x="14.0" y="47.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="47.0" width="31.7" height="9.0" rx="4" fill="#e76f51" opacity="0.85"/>
+<text x="49.7" y="55.0" dy="0" font-size="9" fill="#e76f51" font-weight="600" text-anchor="start">1.4</text>
+</svg></div>
+                <div style="text-align:center;min-width:60px">
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase;margin-bottom:.2rem">Growth</div>
+                  <span style="font-size:.78rem;color:var(--neutral)">Year 1</span>
+                  <div style="font-size:.7rem;color:var(--text2);margin-top:.2rem">GPA 0.0</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:.3rem;flex-wrap:wrap"><span class="badge badge-risk">Very Low ACCESS</span> <span class="badge badge-risk">Low GPA</span> <span class="badge badge-risk">Chronic Absence</span> </div>
+              
+            </div>
+            
+            <div class="card student-card" style="border-top: 3px solid #c0392b">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
+                <div>
+                  <div style="font-weight:600;font-size:1rem">Yusuf Ahmed</div>
+                  <div style="font-size:.78rem;color:var(--text2)">Lakeshore Elementary · Grade 2 · Somali</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#c0392b">1.6</div>
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase">Composite</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.5rem">
+                <div style="flex:1"><svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:180px;font-family:'DM Sans',sans-serif">
+<text x="0.0" y="10.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">L</text>
+<rect x="14.0" y="2.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="2.0" width="40.8" height="9.0" rx="4" fill="#457b9d" opacity="0.85"/>
+<text x="58.8" y="10.0" dy="0" font-size="9" fill="#457b9d" font-weight="600" text-anchor="start">1.8</text>
+<text x="0.0" y="25.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">S</text>
+<rect x="14.0" y="17.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="17.0" width="45.3" height="9.0" rx="4" fill="#2d6a4f" opacity="0.85"/>
+<text x="63.3" y="25.0" dy="0" font-size="9" fill="#2d6a4f" font-weight="600" text-anchor="start">2.0</text>
+<text x="0.0" y="40.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">R</text>
+<rect x="14.0" y="32.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="32.0" width="31.7" height="9.0" rx="4" fill="#7b5ea7" opacity="0.85"/>
+<text x="49.7" y="40.0" dy="0" font-size="9" fill="#7b5ea7" font-weight="600" text-anchor="start">1.4</text>
+<text x="0.0" y="55.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">W</text>
+<rect x="14.0" y="47.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="47.0" width="27.2" height="9.0" rx="4" fill="#e76f51" opacity="0.85"/>
+<text x="45.2" y="55.0" dy="0" font-size="9" fill="#e76f51" font-weight="600" text-anchor="start">1.2</text>
+</svg></div>
+                <div style="text-align:center;min-width:60px">
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase;margin-bottom:.2rem">Growth</div>
+                  <span style="font-size:.78rem;color:var(--neutral)">Year 1</span>
+                  <div style="font-size:.7rem;color:var(--text2);margin-top:.2rem">GPA 0.0</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:.3rem;flex-wrap:wrap"><span class="badge badge-risk">Very Low ACCESS</span> <span class="badge badge-risk">Low GPA</span> <span class="badge badge-risk">Chronic Absence</span> </div>
+              
+            </div>
+            
+            <div class="card student-card" style="border-top: 3px solid #c0392b">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
+                <div>
+                  <div style="font-weight:600;font-size:1rem">Aisha Nasser</div>
+                  <div style="font-size:.78rem;color:var(--text2)">Lakeshore Elementary · Grade 3 · Arabic</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#c0392b">2.2</div>
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase">Composite</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.5rem">
+                <div style="flex:1"><svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:180px;font-family:'DM Sans',sans-serif">
+<text x="0.0" y="10.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">L</text>
+<rect x="14.0" y="2.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="2.0" width="54.4" height="9.0" rx="4" fill="#457b9d" opacity="0.85"/>
+<text x="72.4" y="10.0" dy="0" font-size="9" fill="#457b9d" font-weight="600" text-anchor="start">2.4</text>
+<text x="0.0" y="25.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">S</text>
+<rect x="14.0" y="17.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="17.0" width="58.9" height="9.0" rx="4" fill="#2d6a4f" opacity="0.85"/>
+<text x="76.9" y="25.0" dy="0" font-size="9" fill="#2d6a4f" font-weight="600" text-anchor="start">2.6</text>
+<text x="0.0" y="40.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">R</text>
+<rect x="14.0" y="32.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="32.0" width="45.3" height="9.0" rx="4" fill="#7b5ea7" opacity="0.85"/>
+<text x="63.3" y="40.0" dy="0" font-size="9" fill="#7b5ea7" font-weight="600" text-anchor="start">2.0</text>
+<text x="0.0" y="55.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">W</text>
+<rect x="14.0" y="47.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="47.0" width="40.8" height="9.0" rx="4" fill="#e76f51" opacity="0.85"/>
+<text x="58.8" y="55.0" dy="0" font-size="9" fill="#e76f51" font-weight="600" text-anchor="start">1.8</text>
+</svg></div>
+                <div style="text-align:center;min-width:60px">
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase;margin-bottom:.2rem">Growth</div>
+                  <span style="font-size:.78rem;color:var(--neutral)">Year 1</span>
+                  <div style="font-size:.7rem;color:var(--text2);margin-top:.2rem">GPA 0.5</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:.3rem;flex-wrap:wrap"><span class="badge badge-risk">Low GPA</span> </div>
+              
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="section" id="developing_literacy">
+          <div class="section-head">
+            <span class="section-num" style="color:#e76f51">3</span>
+            <span class="section-title">Developing — Literacy Gap</span>
+            <span class="badge" style="background:#e76f5118;color:#e76f51;margin-left:auto">5 students</span>
+          </div>
+
+          <div class="card" style="border-left:4px solid #e76f51;margin-bottom:1.5rem">
+            <div class="card-title" style="color:#e76f51">Developing — Literacy Gap — Instructional Focus</div>
+            <p style="font-size:.9rem;color:var(--text2);margin-bottom:.8rem">Long-term English Learners with composite 2.9–3.35 where Writing lags 0.5+ points below Listening. Oral fluency masks academic literacy needs.</p>
+            <div style="font-size:.85rem;font-weight:600;margin-bottom:.3rem">Focus: Academic writing, content vocabulary, reading fluency. Close the gap between oral and written proficiency.</div>
+            <ul style="font-size:.85rem;color:var(--text2);padding-left:1.2rem;margin-top:.5rem"><li style="margin-bottom:.3rem">Explicit academic writing instruction — paragraph frames, sentence stems</li><li style="margin-bottom:.3rem">Content-area vocabulary journals with visual + L1 definitions</li><li style="margin-bottom:.3rem">Guided reading at instructional level with comprehension checks</li><li style="margin-bottom:.3rem">Writer's workshop with peer revision and teacher conferencing</li><li style="margin-bottom:.3rem">Reading fluency practice with grade-level informational text</li></ul>
+          </div>
+
+          <div class="two-col" style="margin-bottom:1.5rem">
+            <div>
+              <div style="font-size:.85rem;font-weight:600;margin-bottom:.6rem;color:var(--text2);text-transform:uppercase;letter-spacing:.05em">Tier Modality Profile</div>
+              <svg viewBox="0 0 330 330" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:330px;font-family:'DM Sans',sans-serif">
+<polygon points="165.0,131.0 199.0,165.0 165.0,199.0 131.0,165.0" fill="#f5f2ee" stroke="#e2ddd8" stroke-width="0.8"/>
+<polygon points="165.0,97.0 233.0,165.0 165.0,233.0 97.0,165.0" fill="none" stroke="#e2ddd8" stroke-width="0.8"/>
+<polygon points="165.0,63.0 267.0,165.0 165.0,267.0 63.0,165.0" fill="none" stroke="#e2ddd8" stroke-width="0.8"/>
+<polygon points="165.0,148.0 182.0,165.0 165.0,182.0 148.0,165.0" fill="none" stroke="#ece8e3" stroke-width="0.5" stroke-dasharray="3 3"/>
+<polygon points="165.0,114.0 216.0,165.0 165.0,216.0 114.0,165.0" fill="none" stroke="#ece8e3" stroke-width="0.5" stroke-dasharray="3 3"/>
+<polygon points="165.0,80.0 250.0,165.0 165.0,250.0 80.0,165.0" fill="none" stroke="#ece8e3" stroke-width="0.5" stroke-dasharray="3 3"/>
+<line x1="165.0" y1="165.0" x2="165.0" y2="63.0" stroke="#457b9d" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="165.0" y1="165.0" x2="267.0" y2="165.0" stroke="#2d6a4f" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="165.0" y1="165.0" x2="165.0" y2="267.0" stroke="#7b5ea7" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="165.0" y1="165.0" x2="63.0" y2="165.0" stroke="#e76f51" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="192.0" y="138.0" dy="0" font-size="8.5" fill="#a8a29e" font-weight="normal" text-anchor="start">2</text>
+<text x="216.1" y="113.9" dy="0" font-size="8.5" fill="#a8a29e" font-weight="normal" text-anchor="start">4</text>
+<text x="240.1" y="89.9" dy="0" font-size="8.5" fill="#a8a29e" font-weight="normal" text-anchor="start">6</text>
+<polygon points="165.0,106.5 227.6,165.0 165.0,218.4 115.7,165.0" fill="#e76f51" fill-opacity="0.12" stroke="#e76f51" stroke-width="2.5"/>
+<circle cx="165.0" cy="106.5" r="5" fill="white" stroke="#457b9d" stroke-width="2.5"/>
+<text x="165.0" y="92.5" dy="0" font-size="12" fill="#457b9d" font-weight="700" text-anchor="middle">3.4</text>
+<circle cx="227.6" cy="165.0" r="5" fill="white" stroke="#2d6a4f" stroke-width="2.5"/>
+<text x="241.6" y="170.0" dy="0" font-size="12" fill="#2d6a4f" font-weight="700" text-anchor="start">3.7</text>
+<circle cx="165.0" cy="218.4" r="5" fill="white" stroke="#7b5ea7" stroke-width="2.5"/>
+<text x="165.0" y="236.4" dy="0" font-size="12" fill="#7b5ea7" font-weight="700" text-anchor="middle">3.1</text>
+<circle cx="115.7" cy="165.0" r="5" fill="white" stroke="#e76f51" stroke-width="2.5"/>
+<text x="101.7" y="170.0" dy="0" font-size="12" fill="#e76f51" font-weight="700" text-anchor="end">2.9</text>
+<text x="165.0" y="24.8" dy="4" font-size="12" fill="#457b9d" font-weight="600" text-anchor="middle">Listening</text>
+<text x="305.2" y="165.0" dy="4" font-size="12" fill="#2d6a4f" font-weight="600" text-anchor="middle">Speaking</text>
+<text x="165.0" y="310.8" dy="4" font-size="12" fill="#7b5ea7" font-weight="600" text-anchor="middle">Reading</text>
+<text x="24.8" y="165.0" dy="4" font-size="12" fill="#e76f51" font-weight="600" text-anchor="middle">Writing</text>
+</svg>
+            </div>
+            <div>
+              <div style="font-size:.85rem;font-weight:600;margin-bottom:.6rem;color:var(--text2);text-transform:uppercase;letter-spacing:.05em">Student Roster</div>
+              <table style="width:100%;font-size:.82rem;border-collapse:collapse">
+                <tr style="border-bottom:1px solid var(--border)">
+                  <th style="text-align:left;padding:.3rem .4rem;color:var(--text2);font-weight:600">Name</th>
+                  <th style="text-align:center;padding:.3rem .2rem;color:var(--text2);font-weight:600">Comp.</th>
+                  <th style="text-align:center;padding:.3rem .2rem;color:var(--text2);font-weight:600">Growth</th>
+                  <th style="text-align:center;padding:.3rem .2rem;color:var(--text2);font-weight:600">GPA</th>
+                </tr>
+                <tr style="border-bottom:1px solid #f0ece7">
+      <td style="padding:.3rem .4rem;font-weight:500">Jose M.</td>
+      <td style="text-align:center;padding:.3rem .2rem">3.4</td>
+      <td style="text-align:center;padding:.3rem .2rem;color:var(--green)">+0.20</td>
+      <td style="text-align:center;padding:.3rem .2rem">1.2</td>
+    </tr><tr style="border-bottom:1px solid #f0ece7">
+      <td style="padding:.3rem .4rem;font-weight:500">Carlos P.</td>
+      <td style="text-align:center;padding:.3rem .2rem">3.7</td>
+      <td style="text-align:center;padding:.3rem .2rem;color:var(--green)">+0.20</td>
+      <td style="text-align:center;padding:.3rem .2rem">2.2</td>
+    </tr><tr style="border-bottom:1px solid #f0ece7">
+      <td style="padding:.3rem .4rem;font-weight:500">Tala L.</td>
+      <td style="text-align:center;padding:.3rem .2rem">3.0</td>
+      <td style="text-align:center;padding:.3rem .2rem;color:var(--green)">+0.12</td>
+      <td style="text-align:center;padding:.3rem .2rem">1.0</td>
+    </tr><tr style="border-bottom:1px solid #f0ece7">
+      <td style="padding:.3rem .4rem;font-weight:500">Marco R.</td>
+      <td style="text-align:center;padding:.3rem .2rem">3.1</td>
+      <td style="text-align:center;padding:.3rem .2rem;color:var(--green)">+0.20</td>
+      <td style="text-align:center;padding:.3rem .2rem">1.2</td>
+    </tr><tr style="border-bottom:1px solid #f0ece7">
+      <td style="padding:.3rem .4rem;font-weight:500">Fusi T.</td>
+      <td style="text-align:center;padding:.3rem .2rem">3.2</td>
+      <td style="text-align:center;padding:.3rem .2rem;color:var(--green)">+0.20</td>
+      <td style="text-align:center;padding:.3rem .2rem">1.2</td>
+    </tr>
+              </table>
+            </div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem">
+            
+            <div class="card student-card" style="border-top: 3px solid #e76f51">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
+                <div>
+                  <div style="font-weight:600;font-size:1rem">Jose Martinez</div>
+                  <div style="font-size:.78rem;color:var(--text2)">Canyon Ridge Middle School · Grade 7 · Spanish</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#e76f51">3.4</div>
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase">Composite</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.5rem">
+                <div style="flex:1"><svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:180px;font-family:'DM Sans',sans-serif">
+<text x="0.0" y="10.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">L</text>
+<rect x="14.0" y="2.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="2.0" width="79.3" height="9.0" rx="4" fill="#457b9d" opacity="0.85"/>
+<text x="97.3" y="10.0" dy="0" font-size="9" fill="#457b9d" font-weight="600" text-anchor="start">3.5</text>
+<text x="0.0" y="25.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">S</text>
+<rect x="14.0" y="17.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="17.0" width="86.1" height="9.0" rx="4" fill="#2d6a4f" opacity="0.85"/>
+<text x="104.1" y="25.0" dy="0" font-size="9" fill="#2d6a4f" font-weight="600" text-anchor="start">3.8</text>
+<text x="0.0" y="40.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">R</text>
+<rect x="14.0" y="32.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="32.0" width="72.5" height="9.0" rx="4" fill="#7b5ea7" opacity="0.85"/>
+<text x="90.5" y="40.0" dy="0" font-size="9" fill="#7b5ea7" font-weight="600" text-anchor="start">3.2</text>
+<text x="0.0" y="55.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">W</text>
+<rect x="14.0" y="47.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="47.0" width="65.7" height="9.0" rx="4" fill="#e76f51" opacity="0.85"/>
+<text x="83.7" y="55.0" dy="0" font-size="9" fill="#e76f51" font-weight="600" text-anchor="start">2.9</text>
+</svg></div>
+                <div style="text-align:center;min-width:60px">
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase;margin-bottom:.2rem">Growth</div>
+                  <span style="font-size:.85rem;font-weight:600;color:var(--green)">+0.20</span>
+                  <div style="font-size:.7rem;color:var(--text2);margin-top:.2rem">GPA 1.2</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:.3rem;flex-wrap:wrap"><span class="badge badge-ltel">LTEL</span> <span class="badge badge-risk">Low GPA</span> <span class="badge badge-risk">Chronic Absence</span> </div>
+              
+            </div>
+            
+            <div class="card student-card" style="border-top: 3px solid #e76f51">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
+                <div>
+                  <div style="font-weight:600;font-size:1rem">Carlos Perez</div>
+                  <div style="font-size:.78rem;color:var(--text2)">Pioneer Middle School · Grade 8 · Spanish</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#e76f51">3.7</div>
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase">Composite</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.5rem">
+                <div style="flex:1"><svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:180px;font-family:'DM Sans',sans-serif">
+<text x="0.0" y="10.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">L</text>
+<rect x="14.0" y="2.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="2.0" width="88.4" height="9.0" rx="4" fill="#457b9d" opacity="0.85"/>
+<text x="106.4" y="10.0" dy="0" font-size="9" fill="#457b9d" font-weight="600" text-anchor="start">3.9</text>
+<text x="0.0" y="25.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">S</text>
+<rect x="14.0" y="17.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="17.0" width="92.9" height="9.0" rx="4" fill="#2d6a4f" opacity="0.85"/>
+<text x="110.9" y="25.0" dy="0" font-size="9" fill="#2d6a4f" font-weight="600" text-anchor="start">4.1</text>
+<text x="0.0" y="40.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">R</text>
+<rect x="14.0" y="32.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="32.0" width="81.6" height="9.0" rx="4" fill="#7b5ea7" opacity="0.85"/>
+<text x="99.6" y="40.0" dy="0" font-size="9" fill="#7b5ea7" font-weight="600" text-anchor="start">3.6</text>
+<text x="0.0" y="55.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">W</text>
+<rect x="14.0" y="47.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="47.0" width="74.8" height="9.0" rx="4" fill="#e76f51" opacity="0.85"/>
+<text x="92.8" y="55.0" dy="0" font-size="9" fill="#e76f51" font-weight="600" text-anchor="start">3.3</text>
+</svg></div>
+                <div style="text-align:center;min-width:60px">
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase;margin-bottom:.2rem">Growth</div>
+                  <span style="font-size:.85rem;font-weight:600;color:var(--green)">+0.20</span>
+                  <div style="font-size:.7rem;color:var(--text2);margin-top:.2rem">GPA 2.2</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:.3rem;flex-wrap:wrap"><span class="badge badge-ltel">LTEL</span> </div>
+              
+            </div>
+            
+            <div class="card student-card" style="border-top: 3px solid #e76f51">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
+                <div>
+                  <div style="font-weight:600;font-size:1rem">Tala Latu</div>
+                  <div style="font-size:.78rem;color:var(--text2)">Canyon Ridge Middle School · Grade 8 · Tongan</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#e76f51">3.0</div>
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase">Composite</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.5rem">
+                <div style="flex:1"><svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:180px;font-family:'DM Sans',sans-serif">
+<text x="0.0" y="10.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">L</text>
+<rect x="14.0" y="2.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="2.0" width="70.3" height="9.0" rx="4" fill="#457b9d" opacity="0.85"/>
+<text x="88.3" y="10.0" dy="0" font-size="9" fill="#457b9d" font-weight="600" text-anchor="start">3.1</text>
+<text x="0.0" y="25.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">S</text>
+<rect x="14.0" y="17.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="17.0" width="77.1" height="9.0" rx="4" fill="#2d6a4f" opacity="0.85"/>
+<text x="95.1" y="25.0" dy="0" font-size="9" fill="#2d6a4f" font-weight="600" text-anchor="start">3.4</text>
+<text x="0.0" y="40.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">R</text>
+<rect x="14.0" y="32.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="32.0" width="63.5" height="9.0" rx="4" fill="#7b5ea7" opacity="0.85"/>
+<text x="81.5" y="40.0" dy="0" font-size="9" fill="#7b5ea7" font-weight="600" text-anchor="start">2.8</text>
+<text x="0.0" y="55.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">W</text>
+<rect x="14.0" y="47.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="47.0" width="58.9" height="9.0" rx="4" fill="#e76f51" opacity="0.85"/>
+<text x="76.9" y="55.0" dy="0" font-size="9" fill="#e76f51" font-weight="600" text-anchor="start">2.6</text>
+</svg></div>
+                <div style="text-align:center;min-width:60px">
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase;margin-bottom:.2rem">Growth</div>
+                  <span style="font-size:.85rem;font-weight:600;color:var(--green)">+0.12</span>
+                  <div style="font-size:.7rem;color:var(--text2);margin-top:.2rem">GPA 1.0</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:.3rem;flex-wrap:wrap"><span class="badge badge-ltel">LTEL</span> <span class="badge badge-risk">Low GPA</span> <span class="badge badge-risk">Chronic Absence</span> <span class="badge badge-iep">IEP</span> </div>
+              
+            </div>
+            
+            <div class="card student-card" style="border-top: 3px solid #e76f51">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
+                <div>
+                  <div style="font-weight:600;font-size:1rem">Marco Rodriguez</div>
+                  <div style="font-size:.78rem;color:var(--text2)">Canyon Ridge Middle School · Grade 8 · Spanish</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#e76f51">3.1</div>
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase">Composite</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.5rem">
+                <div style="flex:1"><svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:180px;font-family:'DM Sans',sans-serif">
+<text x="0.0" y="10.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">L</text>
+<rect x="14.0" y="2.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="2.0" width="74.8" height="9.0" rx="4" fill="#457b9d" opacity="0.85"/>
+<text x="92.8" y="10.0" dy="0" font-size="9" fill="#457b9d" font-weight="600" text-anchor="start">3.3</text>
+<text x="0.0" y="25.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">S</text>
+<rect x="14.0" y="17.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="17.0" width="79.3" height="9.0" rx="4" fill="#2d6a4f" opacity="0.85"/>
+<text x="97.3" y="25.0" dy="0" font-size="9" fill="#2d6a4f" font-weight="600" text-anchor="start">3.5</text>
+<text x="0.0" y="40.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">R</text>
+<rect x="14.0" y="32.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="32.0" width="68.0" height="9.0" rx="4" fill="#7b5ea7" opacity="0.85"/>
+<text x="86.0" y="40.0" dy="0" font-size="9" fill="#7b5ea7" font-weight="600" text-anchor="start">3.0</text>
+<text x="0.0" y="55.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">W</text>
+<rect x="14.0" y="47.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="47.0" width="63.5" height="9.0" rx="4" fill="#e76f51" opacity="0.85"/>
+<text x="81.5" y="55.0" dy="0" font-size="9" fill="#e76f51" font-weight="600" text-anchor="start">2.8</text>
+</svg></div>
+                <div style="text-align:center;min-width:60px">
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase;margin-bottom:.2rem">Growth</div>
+                  <span style="font-size:.85rem;font-weight:600;color:var(--green)">+0.20</span>
+                  <div style="font-size:.7rem;color:var(--text2);margin-top:.2rem">GPA 1.2</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:.3rem;flex-wrap:wrap"><span class="badge badge-ltel">LTEL</span> <span class="badge badge-risk">Low GPA</span> <span class="badge badge-risk">Chronic Absence</span> </div>
+              
+            </div>
+            
+            <div class="card student-card" style="border-top: 3px solid #e76f51">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
+                <div>
+                  <div style="font-weight:600;font-size:1rem">Fusi Tonga</div>
+                  <div style="font-size:.78rem;color:var(--text2)">Canyon Ridge Middle School · Grade 7 · Tongan</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#e76f51">3.2</div>
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase">Composite</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.5rem">
+                <div style="flex:1"><svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:180px;font-family:'DM Sans',sans-serif">
+<text x="0.0" y="10.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">L</text>
+<rect x="14.0" y="2.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="2.0" width="77.1" height="9.0" rx="4" fill="#457b9d" opacity="0.85"/>
+<text x="95.1" y="10.0" dy="0" font-size="9" fill="#457b9d" font-weight="600" text-anchor="start">3.4</text>
+<text x="0.0" y="25.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">S</text>
+<rect x="14.0" y="17.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="17.0" width="81.6" height="9.0" rx="4" fill="#2d6a4f" opacity="0.85"/>
+<text x="99.6" y="25.0" dy="0" font-size="9" fill="#2d6a4f" font-weight="600" text-anchor="start">3.6</text>
+<text x="0.0" y="40.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">R</text>
+<rect x="14.0" y="32.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="32.0" width="70.3" height="9.0" rx="4" fill="#7b5ea7" opacity="0.85"/>
+<text x="88.3" y="40.0" dy="0" font-size="9" fill="#7b5ea7" font-weight="600" text-anchor="start">3.1</text>
+<text x="0.0" y="55.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">W</text>
+<rect x="14.0" y="47.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="47.0" width="65.7" height="9.0" rx="4" fill="#e76f51" opacity="0.85"/>
+<text x="83.7" y="55.0" dy="0" font-size="9" fill="#e76f51" font-weight="600" text-anchor="start">2.9</text>
+</svg></div>
+                <div style="text-align:center;min-width:60px">
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase;margin-bottom:.2rem">Growth</div>
+                  <span style="font-size:.85rem;font-weight:600;color:var(--green)">+0.20</span>
+                  <div style="font-size:.7rem;color:var(--text2);margin-top:.2rem">GPA 1.2</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:.3rem;flex-wrap:wrap"><span class="badge badge-ltel">LTEL</span> <span class="badge badge-risk">Low GPA</span> <span class="badge badge-risk">Chronic Absence</span> </div>
+              
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="section" id="developing_ontrack">
+          <div class="section-head">
+            <span class="section-num" style="color:#c17b2e">4</span>
+            <span class="section-title">Developing — On Track</span>
+            <span class="badge" style="background:#c17b2e18;color:#c17b2e;margin-left:auto">7 students</span>
+          </div>
+
+          <div class="card" style="border-left:4px solid #c17b2e;margin-bottom:1.5rem">
+            <div class="card-title" style="color:#c17b2e">Developing — On Track — Instructional Focus</div>
+            <p style="font-size:.9rem;color:var(--text2);margin-bottom:.8rem">Steady growth trajectory with composite 3.3–3.75. Making expected progress across modalities.</p>
+            <div style="font-size:.85rem;font-weight:600;margin-bottom:.3rem">Focus: Push toward proficiency — structured academic discussion, paragraph-level writing, content-area language.</div>
+            <ul style="font-size:.85rem;color:var(--text2);padding-left:1.2rem;margin-top:.5rem"><li style="margin-bottom:.3rem">Structured academic discussion protocols (Think-Pair-Share, Socratic)</li><li style="margin-bottom:.3rem">Multi-paragraph writing with evidence from content-area texts</li><li style="margin-bottom:.3rem">Content-area language objectives alongside academic standards</li><li style="margin-bottom:.3rem">Collaborative projects requiring both oral and written output</li><li style="margin-bottom:.3rem">Gradual release of scaffolds as proficiency increases</li></ul>
+          </div>
+
+          <div class="two-col" style="margin-bottom:1.5rem">
+            <div>
+              <div style="font-size:.85rem;font-weight:600;margin-bottom:.6rem;color:var(--text2);text-transform:uppercase;letter-spacing:.05em">Tier Modality Profile</div>
+              <svg viewBox="0 0 330 330" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:330px;font-family:'DM Sans',sans-serif">
+<polygon points="165.0,131.0 199.0,165.0 165.0,199.0 131.0,165.0" fill="#f5f2ee" stroke="#e2ddd8" stroke-width="0.8"/>
+<polygon points="165.0,97.0 233.0,165.0 165.0,233.0 97.0,165.0" fill="none" stroke="#e2ddd8" stroke-width="0.8"/>
+<polygon points="165.0,63.0 267.0,165.0 165.0,267.0 63.0,165.0" fill="none" stroke="#e2ddd8" stroke-width="0.8"/>
+<polygon points="165.0,148.0 182.0,165.0 165.0,182.0 148.0,165.0" fill="none" stroke="#ece8e3" stroke-width="0.5" stroke-dasharray="3 3"/>
+<polygon points="165.0,114.0 216.0,165.0 165.0,216.0 114.0,165.0" fill="none" stroke="#ece8e3" stroke-width="0.5" stroke-dasharray="3 3"/>
+<polygon points="165.0,80.0 250.0,165.0 165.0,250.0 80.0,165.0" fill="none" stroke="#ece8e3" stroke-width="0.5" stroke-dasharray="3 3"/>
+<line x1="165.0" y1="165.0" x2="165.0" y2="63.0" stroke="#457b9d" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="165.0" y1="165.0" x2="267.0" y2="165.0" stroke="#2d6a4f" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="165.0" y1="165.0" x2="165.0" y2="267.0" stroke="#7b5ea7" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="165.0" y1="165.0" x2="63.0" y2="165.0" stroke="#e76f51" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="192.0" y="138.0" dy="0" font-size="8.5" fill="#a8a29e" font-weight="normal" text-anchor="start">2</text>
+<text x="216.1" y="113.9" dy="0" font-size="8.5" fill="#a8a29e" font-weight="normal" text-anchor="start">4</text>
+<text x="240.1" y="89.9" dy="0" font-size="8.5" fill="#a8a29e" font-weight="normal" text-anchor="start">6</text>
+<polygon points="165.0,101.9 231.5,165.0 165.0,221.8 111.6,165.0" fill="#c17b2e" fill-opacity="0.12" stroke="#c17b2e" stroke-width="2.5"/>
+<circle cx="165.0" cy="101.9" r="5" fill="white" stroke="#457b9d" stroke-width="2.5"/>
+<text x="165.0" y="87.9" dy="0" font-size="12" fill="#457b9d" font-weight="700" text-anchor="middle">3.7</text>
+<circle cx="231.5" cy="165.0" r="5" fill="white" stroke="#2d6a4f" stroke-width="2.5"/>
+<text x="245.5" y="170.0" dy="0" font-size="12" fill="#2d6a4f" font-weight="700" text-anchor="start">3.9</text>
+<circle cx="165.0" cy="221.8" r="5" fill="white" stroke="#7b5ea7" stroke-width="2.5"/>
+<text x="165.0" y="239.8" dy="0" font-size="12" fill="#7b5ea7" font-weight="700" text-anchor="middle">3.3</text>
+<circle cx="111.6" cy="165.0" r="5" fill="white" stroke="#e76f51" stroke-width="2.5"/>
+<text x="97.6" y="170.0" dy="0" font-size="12" fill="#e76f51" font-weight="700" text-anchor="end">3.1</text>
+<text x="165.0" y="24.8" dy="4" font-size="12" fill="#457b9d" font-weight="600" text-anchor="middle">Listening</text>
+<text x="305.2" y="165.0" dy="4" font-size="12" fill="#2d6a4f" font-weight="600" text-anchor="middle">Speaking</text>
+<text x="165.0" y="310.8" dy="4" font-size="12" fill="#7b5ea7" font-weight="600" text-anchor="middle">Reading</text>
+<text x="24.8" y="165.0" dy="4" font-size="12" fill="#e76f51" font-weight="600" text-anchor="middle">Writing</text>
+</svg>
+            </div>
+            <div>
+              <div style="font-size:.85rem;font-weight:600;margin-bottom:.6rem;color:var(--text2);text-transform:uppercase;letter-spacing:.05em">Student Roster</div>
+              <table style="width:100%;font-size:.82rem;border-collapse:collapse">
+                <tr style="border-bottom:1px solid var(--border)">
+                  <th style="text-align:left;padding:.3rem .4rem;color:var(--text2);font-weight:600">Name</th>
+                  <th style="text-align:center;padding:.3rem .2rem;color:var(--text2);font-weight:600">Comp.</th>
+                  <th style="text-align:center;padding:.3rem .2rem;color:var(--text2);font-weight:600">Growth</th>
+                  <th style="text-align:center;padding:.3rem .2rem;color:var(--text2);font-weight:600">GPA</th>
+                </tr>
+                <tr style="border-bottom:1px solid #f0ece7">
+      <td style="padding:.3rem .4rem;font-weight:500">Sione T.</td>
+      <td style="text-align:center;padding:.3rem .2rem">3.6</td>
+      <td style="text-align:center;padding:.3rem .2rem;color:var(--green)">+0.50</td>
+      <td style="text-align:center;padding:.3rem .2rem">2.2</td>
+    </tr><tr style="border-bottom:1px solid #f0ece7">
+      <td style="padding:.3rem .4rem;font-weight:500">Fatima A.</td>
+      <td style="text-align:center;padding:.3rem .2rem">3.4</td>
+      <td style="text-align:center;padding:.3rem .2rem;color:var(--green)">+0.50</td>
+      <td style="text-align:center;padding:.3rem .2rem">2.0</td>
+    </tr><tr style="border-bottom:1px solid #f0ece7">
+      <td style="padding:.3rem .4rem;font-weight:500">Lupe G.</td>
+      <td style="text-align:center;padding:.3rem .2rem">3.6</td>
+      <td style="text-align:center;padding:.3rem .2rem;color:var(--green)">+0.40</td>
+      <td style="text-align:center;padding:.3rem .2rem">2.0</td>
+    </tr><tr style="border-bottom:1px solid #f0ece7">
+      <td style="padding:.3rem .4rem;font-weight:500">Mele F.</td>
+      <td style="text-align:center;padding:.3rem .2rem">3.7</td>
+      <td style="text-align:center;padding:.3rem .2rem;color:var(--green)">+0.40</td>
+      <td style="text-align:center;padding:.3rem .2rem">2.2</td>
+    </tr><tr style="border-bottom:1px solid #f0ece7">
+      <td style="padding:.3rem .4rem;font-weight:500">Halima A.</td>
+      <td style="text-align:center;padding:.3rem .2rem">3.5</td>
+      <td style="text-align:center;padding:.3rem .2rem;color:var(--green)">+0.40</td>
+      <td style="text-align:center;padding:.3rem .2rem">2.0</td>
+    </tr><tr style="border-bottom:1px solid #f0ece7">
+      <td style="padding:.3rem .4rem;font-weight:500">Sina T.</td>
+      <td style="text-align:center;padding:.3rem .2rem">3.5</td>
+      <td style="text-align:center;padding:.3rem .2rem;color:var(--green)">+0.50</td>
+      <td style="text-align:center;padding:.3rem .2rem">2.2</td>
+    </tr><tr style="border-bottom:1px solid #f0ece7">
+      <td style="padding:.3rem .4rem;font-weight:500">Pablo G.</td>
+      <td style="text-align:center;padding:.3rem .2rem">3.4</td>
+      <td style="text-align:center;padding:.3rem .2rem;color:var(--green)">+0.40</td>
+      <td style="text-align:center;padding:.3rem .2rem">2.0</td>
+    </tr>
+              </table>
+            </div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem">
+            
+            <div class="card student-card" style="border-top: 3px solid #c17b2e">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
+                <div>
+                  <div style="font-weight:600;font-size:1rem">Sione Taufa</div>
+                  <div style="font-size:.78rem;color:var(--text2)">Valley Ridge Elementary · Grade 5 · Tongan</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#c17b2e">3.6</div>
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase">Composite</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.5rem">
+                <div style="flex:1"><svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:180px;font-family:'DM Sans',sans-serif">
+<text x="0.0" y="10.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">L</text>
+<rect x="14.0" y="2.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="2.0" width="86.1" height="9.0" rx="4" fill="#457b9d" opacity="0.85"/>
+<text x="104.1" y="10.0" dy="0" font-size="9" fill="#457b9d" font-weight="600" text-anchor="start">3.8</text>
+<text x="0.0" y="25.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">S</text>
+<rect x="14.0" y="17.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="17.0" width="90.7" height="9.0" rx="4" fill="#2d6a4f" opacity="0.85"/>
+<text x="108.7" y="25.0" dy="0" font-size="9" fill="#2d6a4f" font-weight="600" text-anchor="start">4.0</text>
+<text x="0.0" y="40.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">R</text>
+<rect x="14.0" y="32.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="32.0" width="79.3" height="9.0" rx="4" fill="#7b5ea7" opacity="0.85"/>
+<text x="97.3" y="40.0" dy="0" font-size="9" fill="#7b5ea7" font-weight="600" text-anchor="start">3.5</text>
+<text x="0.0" y="55.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">W</text>
+<rect x="14.0" y="47.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="47.0" width="74.8" height="9.0" rx="4" fill="#e76f51" opacity="0.85"/>
+<text x="92.8" y="55.0" dy="0" font-size="9" fill="#e76f51" font-weight="600" text-anchor="start">3.3</text>
+</svg></div>
+                <div style="text-align:center;min-width:60px">
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase;margin-bottom:.2rem">Growth</div>
+                  <span style="font-size:.85rem;font-weight:600;color:var(--green)">+0.50</span>
+                  <div style="font-size:.7rem;color:var(--text2);margin-top:.2rem">GPA 2.2</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:.3rem;flex-wrap:wrap"></div>
+              
+            </div>
+            
+            <div class="card student-card" style="border-top: 3px solid #c17b2e">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
+                <div>
+                  <div style="font-weight:600;font-size:1rem">Fatima Al-Hassan</div>
+                  <div style="font-size:.78rem;color:var(--text2)">Lakeshore Elementary · Grade 3 · Arabic</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#c17b2e">3.4</div>
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase">Composite</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.5rem">
+                <div style="flex:1"><svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:180px;font-family:'DM Sans',sans-serif">
+<text x="0.0" y="10.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">L</text>
+<rect x="14.0" y="2.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="2.0" width="79.3" height="9.0" rx="4" fill="#457b9d" opacity="0.85"/>
+<text x="97.3" y="10.0" dy="0" font-size="9" fill="#457b9d" font-weight="600" text-anchor="start">3.5</text>
+<text x="0.0" y="25.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">S</text>
+<rect x="14.0" y="17.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="17.0" width="83.9" height="9.0" rx="4" fill="#2d6a4f" opacity="0.85"/>
+<text x="101.9" y="25.0" dy="0" font-size="9" fill="#2d6a4f" font-weight="600" text-anchor="start">3.7</text>
+<text x="0.0" y="40.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">R</text>
+<rect x="14.0" y="32.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="32.0" width="72.5" height="9.0" rx="4" fill="#7b5ea7" opacity="0.85"/>
+<text x="90.5" y="40.0" dy="0" font-size="9" fill="#7b5ea7" font-weight="600" text-anchor="start">3.2</text>
+<text x="0.0" y="55.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">W</text>
+<rect x="14.0" y="47.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="47.0" width="68.0" height="9.0" rx="4" fill="#e76f51" opacity="0.85"/>
+<text x="86.0" y="55.0" dy="0" font-size="9" fill="#e76f51" font-weight="600" text-anchor="start">3.0</text>
+</svg></div>
+                <div style="text-align:center;min-width:60px">
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase;margin-bottom:.2rem">Growth</div>
+                  <span style="font-size:.85rem;font-weight:600;color:var(--green)">+0.50</span>
+                  <div style="font-size:.7rem;color:var(--text2);margin-top:.2rem">GPA 2.0</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:.3rem;flex-wrap:wrap"></div>
+              
+            </div>
+            
+            <div class="card student-card" style="border-top: 3px solid #c17b2e">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
+                <div>
+                  <div style="font-weight:600;font-size:1rem">Lupe Gonzalez</div>
+                  <div style="font-size:.78rem;color:var(--text2)">Pioneer Middle School · Grade 6 · Spanish</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#c17b2e">3.6</div>
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase">Composite</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.5rem">
+                <div style="flex:1"><svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:180px;font-family:'DM Sans',sans-serif">
+<text x="0.0" y="10.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">L</text>
+<rect x="14.0" y="2.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="2.0" width="86.1" height="9.0" rx="4" fill="#457b9d" opacity="0.85"/>
+<text x="104.1" y="10.0" dy="0" font-size="9" fill="#457b9d" font-weight="600" text-anchor="start">3.8</text>
+<text x="0.0" y="25.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">S</text>
+<rect x="14.0" y="17.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="17.0" width="90.7" height="9.0" rx="4" fill="#2d6a4f" opacity="0.85"/>
+<text x="108.7" y="25.0" dy="0" font-size="9" fill="#2d6a4f" font-weight="600" text-anchor="start">4.0</text>
+<text x="0.0" y="40.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">R</text>
+<rect x="14.0" y="32.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="32.0" width="79.3" height="9.0" rx="4" fill="#7b5ea7" opacity="0.85"/>
+<text x="97.3" y="40.0" dy="0" font-size="9" fill="#7b5ea7" font-weight="600" text-anchor="start">3.5</text>
+<text x="0.0" y="55.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">W</text>
+<rect x="14.0" y="47.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="47.0" width="72.5" height="9.0" rx="4" fill="#e76f51" opacity="0.85"/>
+<text x="90.5" y="55.0" dy="0" font-size="9" fill="#e76f51" font-weight="600" text-anchor="start">3.2</text>
+</svg></div>
+                <div style="text-align:center;min-width:60px">
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase;margin-bottom:.2rem">Growth</div>
+                  <span style="font-size:.85rem;font-weight:600;color:var(--green)">+0.40</span>
+                  <div style="font-size:.7rem;color:var(--text2);margin-top:.2rem">GPA 2.0</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:.3rem;flex-wrap:wrap"></div>
+              
+            </div>
+            
+            <div class="card student-card" style="border-top: 3px solid #c17b2e">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
+                <div>
+                  <div style="font-weight:600;font-size:1rem">Mele Fifita</div>
+                  <div style="font-size:.78rem;color:var(--text2)">Valley Ridge Elementary · Grade 5 · Tongan</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#c17b2e">3.7</div>
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase">Composite</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.5rem">
+                <div style="flex:1"><svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:180px;font-family:'DM Sans',sans-serif">
+<text x="0.0" y="10.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">L</text>
+<rect x="14.0" y="2.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="2.0" width="95.2" height="9.0" rx="4" fill="#457b9d" opacity="0.85"/>
+<text x="113.2" y="10.0" dy="0" font-size="9" fill="#457b9d" font-weight="600" text-anchor="start">4.2</text>
+<text x="0.0" y="25.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">S</text>
+<rect x="14.0" y="17.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="17.0" width="99.7" height="9.0" rx="4" fill="#2d6a4f" opacity="0.85"/>
+<text x="117.7" y="25.0" dy="0" font-size="9" fill="#2d6a4f" font-weight="600" text-anchor="start">4.4</text>
+<text x="0.0" y="40.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">R</text>
+<rect x="14.0" y="32.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="32.0" width="72.5" height="9.0" rx="4" fill="#7b5ea7" opacity="0.85"/>
+<text x="90.5" y="40.0" dy="0" font-size="9" fill="#7b5ea7" font-weight="600" text-anchor="start">3.2</text>
+<text x="0.0" y="55.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">W</text>
+<rect x="14.0" y="47.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="47.0" width="70.3" height="9.0" rx="4" fill="#e76f51" opacity="0.85"/>
+<text x="88.3" y="55.0" dy="0" font-size="9" fill="#e76f51" font-weight="600" text-anchor="start">3.1</text>
+</svg></div>
+                <div style="text-align:center;min-width:60px">
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase;margin-bottom:.2rem">Growth</div>
+                  <span style="font-size:.85rem;font-weight:600;color:var(--green)">+0.40</span>
+                  <div style="font-size:.7rem;color:var(--text2);margin-top:.2rem">GPA 2.2</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:.3rem;flex-wrap:wrap"></div>
+              <div class="insight-box warn" style="margin-top:.6rem;padding:.5rem .8rem;font-size:.78rem">1.3-pt gap: Speaking (4.4) vs Writing (3.1) — needs targeted writing practice</div>
+            </div>
+            
+            <div class="card student-card" style="border-top: 3px solid #c17b2e">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
+                <div>
+                  <div style="font-weight:600;font-size:1rem">Halima Abdi</div>
+                  <div style="font-size:.78rem;color:var(--text2)">Pioneer Middle School · Grade 6 · Somali</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#c17b2e">3.5</div>
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase">Composite</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.5rem">
+                <div style="flex:1"><svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:180px;font-family:'DM Sans',sans-serif">
+<text x="0.0" y="10.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">L</text>
+<rect x="14.0" y="2.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="2.0" width="81.6" height="9.0" rx="4" fill="#457b9d" opacity="0.85"/>
+<text x="99.6" y="10.0" dy="0" font-size="9" fill="#457b9d" font-weight="600" text-anchor="start">3.6</text>
+<text x="0.0" y="25.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">S</text>
+<rect x="14.0" y="17.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="17.0" width="86.1" height="9.0" rx="4" fill="#2d6a4f" opacity="0.85"/>
+<text x="104.1" y="25.0" dy="0" font-size="9" fill="#2d6a4f" font-weight="600" text-anchor="start">3.8</text>
+<text x="0.0" y="40.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">R</text>
+<rect x="14.0" y="32.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="32.0" width="77.1" height="9.0" rx="4" fill="#7b5ea7" opacity="0.85"/>
+<text x="95.1" y="40.0" dy="0" font-size="9" fill="#7b5ea7" font-weight="600" text-anchor="start">3.4</text>
+<text x="0.0" y="55.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">W</text>
+<rect x="14.0" y="47.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="47.0" width="72.5" height="9.0" rx="4" fill="#e76f51" opacity="0.85"/>
+<text x="90.5" y="55.0" dy="0" font-size="9" fill="#e76f51" font-weight="600" text-anchor="start">3.2</text>
+</svg></div>
+                <div style="text-align:center;min-width:60px">
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase;margin-bottom:.2rem">Growth</div>
+                  <span style="font-size:.85rem;font-weight:600;color:var(--green)">+0.40</span>
+                  <div style="font-size:.7rem;color:var(--text2);margin-top:.2rem">GPA 2.0</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:.3rem;flex-wrap:wrap"></div>
+              
+            </div>
+            
+            <div class="card student-card" style="border-top: 3px solid #c17b2e">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
+                <div>
+                  <div style="font-weight:600;font-size:1rem">Sina Tuivaga</div>
+                  <div style="font-size:.78rem;color:var(--text2)">Valley Ridge Elementary · Grade 4 · Tongan</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#c17b2e">3.5</div>
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase">Composite</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.5rem">
+                <div style="flex:1"><svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:180px;font-family:'DM Sans',sans-serif">
+<text x="0.0" y="10.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">L</text>
+<rect x="14.0" y="2.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="2.0" width="81.6" height="9.0" rx="4" fill="#457b9d" opacity="0.85"/>
+<text x="99.6" y="10.0" dy="0" font-size="9" fill="#457b9d" font-weight="600" text-anchor="start">3.6</text>
+<text x="0.0" y="25.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">S</text>
+<rect x="14.0" y="17.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="17.0" width="86.1" height="9.0" rx="4" fill="#2d6a4f" opacity="0.85"/>
+<text x="104.1" y="25.0" dy="0" font-size="9" fill="#2d6a4f" font-weight="600" text-anchor="start">3.8</text>
+<text x="0.0" y="40.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">R</text>
+<rect x="14.0" y="32.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="32.0" width="74.8" height="9.0" rx="4" fill="#7b5ea7" opacity="0.85"/>
+<text x="92.8" y="40.0" dy="0" font-size="9" fill="#7b5ea7" font-weight="600" text-anchor="start">3.3</text>
+<text x="0.0" y="55.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">W</text>
+<rect x="14.0" y="47.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="47.0" width="70.3" height="9.0" rx="4" fill="#e76f51" opacity="0.85"/>
+<text x="88.3" y="55.0" dy="0" font-size="9" fill="#e76f51" font-weight="600" text-anchor="start">3.1</text>
+</svg></div>
+                <div style="text-align:center;min-width:60px">
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase;margin-bottom:.2rem">Growth</div>
+                  <span style="font-size:.85rem;font-weight:600;color:var(--green)">+0.50</span>
+                  <div style="font-size:.7rem;color:var(--text2);margin-top:.2rem">GPA 2.2</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:.3rem;flex-wrap:wrap"></div>
+              
+            </div>
+            
+            <div class="card student-card" style="border-top: 3px solid #c17b2e">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
+                <div>
+                  <div style="font-weight:600;font-size:1rem">Pablo Gonzalez</div>
+                  <div style="font-size:.78rem;color:var(--text2)">Valley Ridge Elementary · Grade 5 · Spanish</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#c17b2e">3.4</div>
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase">Composite</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.5rem">
+                <div style="flex:1"><svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:180px;font-family:'DM Sans',sans-serif">
+<text x="0.0" y="10.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">L</text>
+<rect x="14.0" y="2.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="2.0" width="79.3" height="9.0" rx="4" fill="#457b9d" opacity="0.85"/>
+<text x="97.3" y="10.0" dy="0" font-size="9" fill="#457b9d" font-weight="600" text-anchor="start">3.5</text>
+<text x="0.0" y="25.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">S</text>
+<rect x="14.0" y="17.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="17.0" width="83.9" height="9.0" rx="4" fill="#2d6a4f" opacity="0.85"/>
+<text x="101.9" y="25.0" dy="0" font-size="9" fill="#2d6a4f" font-weight="600" text-anchor="start">3.7</text>
+<text x="0.0" y="40.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">R</text>
+<rect x="14.0" y="32.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="32.0" width="74.8" height="9.0" rx="4" fill="#7b5ea7" opacity="0.85"/>
+<text x="92.8" y="40.0" dy="0" font-size="9" fill="#7b5ea7" font-weight="600" text-anchor="start">3.3</text>
+<text x="0.0" y="55.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">W</text>
+<rect x="14.0" y="47.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="47.0" width="70.3" height="9.0" rx="4" fill="#e76f51" opacity="0.85"/>
+<text x="88.3" y="55.0" dy="0" font-size="9" fill="#e76f51" font-weight="600" text-anchor="start">3.1</text>
+</svg></div>
+                <div style="text-align:center;min-width:60px">
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase;margin-bottom:.2rem">Growth</div>
+                  <span style="font-size:.85rem;font-weight:600;color:var(--green)">+0.40</span>
+                  <div style="font-size:.7rem;color:var(--text2);margin-top:.2rem">GPA 2.0</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:.3rem;flex-wrap:wrap"></div>
+              
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="section" id="accelerating">
+          <div class="section-head">
+            <span class="section-num" style="color:#52b788">5</span>
+            <span class="section-title">Accelerating</span>
+            <span class="badge" style="background:#52b78818;color:#52b788;margin-left:auto">4 students</span>
+          </div>
+
+          <div class="card" style="border-left:4px solid #52b788;margin-bottom:1.5rem">
+            <div class="card-title" style="color:#52b788">Accelerating — Instructional Focus</div>
+            <p style="font-size:.9rem;color:var(--text2);margin-bottom:.8rem">Strong growth with composite 3.8–4.2, grades ≥ 75%. On pace to reach proficiency within 1–2 years.</p>
+            <div style="font-size:.85rem;font-weight:600;margin-bottom:.3rem">Focus: Grade-level content with embedded language support; reduce pull-out time, increase mainstream exposure.</div>
+            <ul style="font-size:.85rem;color:var(--text2);padding-left:1.2rem;margin-top:.5rem"><li style="margin-bottom:.3rem">Grade-level content with embedded (not separate) language support</li><li style="margin-bottom:.3rem">Reduce pull-out time — prioritize in-class push-in model</li><li style="margin-bottom:.3rem">Advanced academic vocabulary and complex sentence structures</li><li style="margin-bottom:.3rem">Independent reading with text complexity progression</li><li style="margin-bottom:.3rem">Prepare for mainstream-only instruction</li></ul>
+          </div>
+
+          <div class="two-col" style="margin-bottom:1.5rem">
+            <div>
+              <div style="font-size:.85rem;font-weight:600;margin-bottom:.6rem;color:var(--text2);text-transform:uppercase;letter-spacing:.05em">Tier Modality Profile</div>
+              <svg viewBox="0 0 330 330" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:330px;font-family:'DM Sans',sans-serif">
+<polygon points="165.0,131.0 199.0,165.0 165.0,199.0 131.0,165.0" fill="#f5f2ee" stroke="#e2ddd8" stroke-width="0.8"/>
+<polygon points="165.0,97.0 233.0,165.0 165.0,233.0 97.0,165.0" fill="none" stroke="#e2ddd8" stroke-width="0.8"/>
+<polygon points="165.0,63.0 267.0,165.0 165.0,267.0 63.0,165.0" fill="none" stroke="#e2ddd8" stroke-width="0.8"/>
+<polygon points="165.0,148.0 182.0,165.0 165.0,182.0 148.0,165.0" fill="none" stroke="#ece8e3" stroke-width="0.5" stroke-dasharray="3 3"/>
+<polygon points="165.0,114.0 216.0,165.0 165.0,216.0 114.0,165.0" fill="none" stroke="#ece8e3" stroke-width="0.5" stroke-dasharray="3 3"/>
+<polygon points="165.0,80.0 250.0,165.0 165.0,250.0 80.0,165.0" fill="none" stroke="#ece8e3" stroke-width="0.5" stroke-dasharray="3 3"/>
+<line x1="165.0" y1="165.0" x2="165.0" y2="63.0" stroke="#457b9d" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="165.0" y1="165.0" x2="267.0" y2="165.0" stroke="#2d6a4f" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="165.0" y1="165.0" x2="165.0" y2="267.0" stroke="#7b5ea7" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="165.0" y1="165.0" x2="63.0" y2="165.0" stroke="#e76f51" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="192.0" y="138.0" dy="0" font-size="8.5" fill="#a8a29e" font-weight="normal" text-anchor="start">2</text>
+<text x="216.1" y="113.9" dy="0" font-size="8.5" fill="#a8a29e" font-weight="normal" text-anchor="start">4</text>
+<text x="240.1" y="89.9" dy="0" font-size="8.5" fill="#a8a29e" font-weight="normal" text-anchor="start">6</text>
+<polygon points="165.0,97.0 236.7,165.0 165.0,231.3 102.1,165.0" fill="#52b788" fill-opacity="0.12" stroke="#52b788" stroke-width="2.5"/>
+<circle cx="165.0" cy="97.0" r="5" fill="white" stroke="#457b9d" stroke-width="2.5"/>
+<text x="165.0" y="83.0" dy="0" font-size="12" fill="#457b9d" font-weight="700" text-anchor="middle">4.0</text>
+<circle cx="236.7" cy="165.0" r="5" fill="white" stroke="#2d6a4f" stroke-width="2.5"/>
+<text x="250.7" y="170.0" dy="0" font-size="12" fill="#2d6a4f" font-weight="700" text-anchor="start">4.2</text>
+<circle cx="165.0" cy="231.3" r="5" fill="white" stroke="#7b5ea7" stroke-width="2.5"/>
+<text x="165.0" y="249.3" dy="0" font-size="12" fill="#7b5ea7" font-weight="700" text-anchor="middle">3.9</text>
+<circle cx="102.1" cy="165.0" r="5" fill="white" stroke="#e76f51" stroke-width="2.5"/>
+<text x="88.1" y="170.0" dy="0" font-size="12" fill="#e76f51" font-weight="700" text-anchor="end">3.7</text>
+<text x="165.0" y="24.8" dy="4" font-size="12" fill="#457b9d" font-weight="600" text-anchor="middle">Listening</text>
+<text x="305.2" y="165.0" dy="4" font-size="12" fill="#2d6a4f" font-weight="600" text-anchor="middle">Speaking</text>
+<text x="165.0" y="310.8" dy="4" font-size="12" fill="#7b5ea7" font-weight="600" text-anchor="middle">Reading</text>
+<text x="24.8" y="165.0" dy="4" font-size="12" fill="#e76f51" font-weight="600" text-anchor="middle">Writing</text>
+</svg>
+            </div>
+            <div>
+              <div style="font-size:.85rem;font-weight:600;margin-bottom:.6rem;color:var(--text2);text-transform:uppercase;letter-spacing:.05em">Student Roster</div>
+              <table style="width:100%;font-size:.82rem;border-collapse:collapse">
+                <tr style="border-bottom:1px solid var(--border)">
+                  <th style="text-align:left;padding:.3rem .4rem;color:var(--text2);font-weight:600">Name</th>
+                  <th style="text-align:center;padding:.3rem .2rem;color:var(--text2);font-weight:600">Comp.</th>
+                  <th style="text-align:center;padding:.3rem .2rem;color:var(--text2);font-weight:600">Growth</th>
+                  <th style="text-align:center;padding:.3rem .2rem;color:var(--text2);font-weight:600">GPA</th>
+                </tr>
+                <tr style="border-bottom:1px solid #f0ece7">
+      <td style="padding:.3rem .4rem;font-weight:500">Maria R.</td>
+      <td style="text-align:center;padding:.3rem .2rem">4.2</td>
+      <td style="text-align:center;padding:.3rem .2rem;color:var(--green)">+0.50</td>
+      <td style="text-align:center;padding:.3rem .2rem">3.0</td>
+    </tr><tr style="border-bottom:1px solid #f0ece7">
+      <td style="padding:.3rem .4rem;font-weight:500">Ana S.</td>
+      <td style="text-align:center;padding:.3rem .2rem">3.8</td>
+      <td style="text-align:center;padding:.3rem .2rem;color:var(--green)">+0.35</td>
+      <td style="text-align:center;padding:.3rem .2rem">2.5</td>
+    </tr><tr style="border-bottom:1px solid #f0ece7">
+      <td style="padding:.3rem .4rem;font-weight:500">Diego L.</td>
+      <td style="text-align:center;padding:.3rem .2rem">3.9</td>
+      <td style="text-align:center;padding:.3rem .2rem;color:var(--green)">+0.50</td>
+      <td style="text-align:center;padding:.3rem .2rem">2.8</td>
+    </tr><tr style="border-bottom:1px solid #f0ece7">
+      <td style="padding:.3rem .4rem;font-weight:500">Miguel R.</td>
+      <td style="text-align:center;padding:.3rem .2rem">3.9</td>
+      <td style="text-align:center;padding:.3rem .2rem;color:var(--green)">+0.40</td>
+      <td style="text-align:center;padding:.3rem .2rem">3.0</td>
+    </tr>
+              </table>
+            </div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem">
+            
+            <div class="card student-card" style="border-top: 3px solid #52b788">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
+                <div>
+                  <div style="font-weight:600;font-size:1rem">Maria Rodriguez</div>
+                  <div style="font-size:.78rem;color:var(--text2)">Valley Ridge Elementary · Grade 4 · Spanish</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#52b788">4.2</div>
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase">Composite</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.5rem">
+                <div style="flex:1"><svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:180px;font-family:'DM Sans',sans-serif">
+<text x="0.0" y="10.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">L</text>
+<rect x="14.0" y="2.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="2.0" width="95.2" height="9.0" rx="4" fill="#457b9d" opacity="0.85"/>
+<text x="113.2" y="10.0" dy="0" font-size="9" fill="#457b9d" font-weight="600" text-anchor="start">4.2</text>
+<text x="0.0" y="25.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">S</text>
+<rect x="14.0" y="17.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="17.0" width="102.0" height="9.0" rx="4" fill="#2d6a4f" opacity="0.85"/>
+<text x="120.0" y="25.0" dy="0" font-size="9" fill="#2d6a4f" font-weight="600" text-anchor="start">4.5</text>
+<text x="0.0" y="40.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">R</text>
+<rect x="14.0" y="32.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="32.0" width="92.9" height="9.0" rx="4" fill="#7b5ea7" opacity="0.85"/>
+<text x="110.9" y="40.0" dy="0" font-size="9" fill="#7b5ea7" font-weight="600" text-anchor="start">4.1</text>
+<text x="0.0" y="55.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">W</text>
+<rect x="14.0" y="47.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="47.0" width="88.4" height="9.0" rx="4" fill="#e76f51" opacity="0.85"/>
+<text x="106.4" y="55.0" dy="0" font-size="9" fill="#e76f51" font-weight="600" text-anchor="start">3.9</text>
+</svg></div>
+                <div style="text-align:center;min-width:60px">
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase;margin-bottom:.2rem">Growth</div>
+                  <span style="font-size:.85rem;font-weight:600;color:var(--green)">+0.50</span>
+                  <div style="font-size:.7rem;color:var(--text2);margin-top:.2rem">GPA 3.0</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:.3rem;flex-wrap:wrap"></div>
+              
+            </div>
+            
+            <div class="card student-card" style="border-top: 3px solid #52b788">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
+                <div>
+                  <div style="font-weight:600;font-size:1rem">Ana Silva</div>
+                  <div style="font-size:.78rem;color:var(--text2)">Canyon Ridge Middle School · Grade 7 · Portuguese</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#52b788">3.8</div>
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase">Composite</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.5rem">
+                <div style="flex:1"><svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:180px;font-family:'DM Sans',sans-serif">
+<text x="0.0" y="10.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">L</text>
+<rect x="14.0" y="2.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="2.0" width="86.1" height="9.0" rx="4" fill="#457b9d" opacity="0.85"/>
+<text x="104.1" y="10.0" dy="0" font-size="9" fill="#457b9d" font-weight="600" text-anchor="start">3.8</text>
+<text x="0.0" y="25.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">S</text>
+<rect x="14.0" y="17.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="17.0" width="90.7" height="9.0" rx="4" fill="#2d6a4f" opacity="0.85"/>
+<text x="108.7" y="25.0" dy="0" font-size="9" fill="#2d6a4f" font-weight="600" text-anchor="start">4.0</text>
+<text x="0.0" y="40.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">R</text>
+<rect x="14.0" y="32.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="32.0" width="88.4" height="9.0" rx="4" fill="#7b5ea7" opacity="0.85"/>
+<text x="106.4" y="40.0" dy="0" font-size="9" fill="#7b5ea7" font-weight="600" text-anchor="start">3.9</text>
+<text x="0.0" y="55.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">W</text>
+<rect x="14.0" y="47.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="47.0" width="81.6" height="9.0" rx="4" fill="#e76f51" opacity="0.85"/>
+<text x="99.6" y="55.0" dy="0" font-size="9" fill="#e76f51" font-weight="600" text-anchor="start">3.6</text>
+</svg></div>
+                <div style="text-align:center;min-width:60px">
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase;margin-bottom:.2rem">Growth</div>
+                  <span style="font-size:.85rem;font-weight:600;color:var(--green)">+0.35</span>
+                  <div style="font-size:.7rem;color:var(--text2);margin-top:.2rem">GPA 2.5</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:.3rem;flex-wrap:wrap"><span class="badge badge-ltel">LTEL</span> </div>
+              
+            </div>
+            
+            <div class="card student-card" style="border-top: 3px solid #52b788">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
+                <div>
+                  <div style="font-weight:600;font-size:1rem">Diego Lopez</div>
+                  <div style="font-size:.78rem;color:var(--text2)">Lakeshore Elementary · Grade 3 · Spanish</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#52b788">3.9</div>
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase">Composite</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.5rem">
+                <div style="flex:1"><svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:180px;font-family:'DM Sans',sans-serif">
+<text x="0.0" y="10.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">L</text>
+<rect x="14.0" y="2.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="2.0" width="90.7" height="9.0" rx="4" fill="#457b9d" opacity="0.85"/>
+<text x="108.7" y="10.0" dy="0" font-size="9" fill="#457b9d" font-weight="600" text-anchor="start">4.0</text>
+<text x="0.0" y="25.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">S</text>
+<rect x="14.0" y="17.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="17.0" width="95.2" height="9.0" rx="4" fill="#2d6a4f" opacity="0.85"/>
+<text x="113.2" y="25.0" dy="0" font-size="9" fill="#2d6a4f" font-weight="600" text-anchor="start">4.2</text>
+<text x="0.0" y="40.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">R</text>
+<rect x="14.0" y="32.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="32.0" width="86.1" height="9.0" rx="4" fill="#7b5ea7" opacity="0.85"/>
+<text x="104.1" y="40.0" dy="0" font-size="9" fill="#7b5ea7" font-weight="600" text-anchor="start">3.8</text>
+<text x="0.0" y="55.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">W</text>
+<rect x="14.0" y="47.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="47.0" width="81.6" height="9.0" rx="4" fill="#e76f51" opacity="0.85"/>
+<text x="99.6" y="55.0" dy="0" font-size="9" fill="#e76f51" font-weight="600" text-anchor="start">3.6</text>
+</svg></div>
+                <div style="text-align:center;min-width:60px">
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase;margin-bottom:.2rem">Growth</div>
+                  <span style="font-size:.85rem;font-weight:600;color:var(--green)">+0.50</span>
+                  <div style="font-size:.7rem;color:var(--text2);margin-top:.2rem">GPA 2.8</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:.3rem;flex-wrap:wrap"></div>
+              
+            </div>
+            
+            <div class="card student-card" style="border-top: 3px solid #52b788">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
+                <div>
+                  <div style="font-weight:600;font-size:1rem">Miguel Ramirez</div>
+                  <div style="font-size:.78rem;color:var(--text2)">Pioneer Middle School · Grade 7 · Spanish</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:'DM Serif Display',serif;font-size:1.4rem;color:#52b788">3.9</div>
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase">Composite</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center;margin-bottom:.5rem">
+                <div style="flex:1"><svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:180px;font-family:'DM Sans',sans-serif">
+<text x="0.0" y="10.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">L</text>
+<rect x="14.0" y="2.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="2.0" width="90.7" height="9.0" rx="4" fill="#457b9d" opacity="0.85"/>
+<text x="108.7" y="10.0" dy="0" font-size="9" fill="#457b9d" font-weight="600" text-anchor="start">4.0</text>
+<text x="0.0" y="25.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">S</text>
+<rect x="14.0" y="17.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="17.0" width="95.2" height="9.0" rx="4" fill="#2d6a4f" opacity="0.85"/>
+<text x="113.2" y="25.0" dy="0" font-size="9" fill="#2d6a4f" font-weight="600" text-anchor="start">4.2</text>
+<text x="0.0" y="40.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">R</text>
+<rect x="14.0" y="32.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="32.0" width="86.1" height="9.0" rx="4" fill="#7b5ea7" opacity="0.85"/>
+<text x="104.1" y="40.0" dy="0" font-size="9" fill="#7b5ea7" font-weight="600" text-anchor="start">3.8</text>
+<text x="0.0" y="55.0" dy="0" font-size="9" fill="#a8a29e" font-weight="600" text-anchor="start">W</text>
+<rect x="14.0" y="47.0" width="136.0" height="9.0" rx="4" fill="#e8e4df" opacity="1.0"/>
+<rect x="14.0" y="47.0" width="83.9" height="9.0" rx="4" fill="#e76f51" opacity="0.85"/>
+<text x="101.9" y="55.0" dy="0" font-size="9" fill="#e76f51" font-weight="600" text-anchor="start">3.7</text>
+</svg></div>
+                <div style="text-align:center;min-width:60px">
+                  <div style="font-size:.7rem;color:var(--text2);text-transform:uppercase;margin-bottom:.2rem">Growth</div>
+                  <span style="font-size:.85rem;font-weight:600;color:var(--green)">+0.40</span>
+                  <div style="font-size:.7rem;color:var(--text2);margin-top:.2rem">GPA 3.0</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:.3rem;flex-wrap:wrap"></div>
+              
+            </div>
+            
+          </div>
+        </div>
+        
+
+  </main>
+</div>
+</body>
+</html>

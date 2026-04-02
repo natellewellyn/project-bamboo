@@ -1,0 +1,5 @@
+*.xlsx
+*.docx
+.DS_Store
+.~lock.*
+Meeting Notes/
