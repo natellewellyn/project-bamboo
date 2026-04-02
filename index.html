@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ELL Data Analysis Reports — Cedar Valley USD</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:         #faf8f5;
+  --bg2:        #f3efe9;
+  --text:       #1c1917;
+  --text2:      #57534e;
+  --green:      #2d6a4f;
+  --mid-green:  #52b788;
+  --light-green:#95d5b2;
+  --terracotta: #e76f51;
+  --amber:      #c17b2e;
+  --blue:       #457b9d;
+  --border:     #e2ddd8;
+  --shadow:     0 2px 12px rgba(28,25,23,.07);
+}
+
+*, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+.site-header {
+  background: var(--green);
+  color: white;
+  padding: 4rem 2rem 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 110% 50%, #1b4332 0%, transparent 60%);
+}
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+.header-eyebrow {
+  font-size: .8rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  opacity: .7;
+  margin-bottom: .6rem;
+}
+.header-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: .9rem;
+}
+.header-sub {
+  opacity: .8;
+  font-size: 1.05rem;
+  max-width: 560px;
+  line-height: 1.55;
+}
+
+.main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+}
+
+.cards {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem 2.2rem;
+  text-decoration: none;
+  color: var(--text);
+  box-shadow: var(--shadow);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 1.5rem;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(28,25,23,.1);
+  border-color: var(--mid-green);
+}
+.card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+.card-icon.green  { background: #e8f5ee; color: var(--green); }
+.card-icon.amber  { background: #fef3e2; color: var(--amber); }
+.card-icon.blue   { background: #e8f0f5; color: var(--blue); }
+
+.card-label {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  margin-bottom: .35rem;
+}
+.card-desc {
+  color: var(--text2);
+  font-size: .92rem;
+  line-height: 1.5;
+}
+.card-arrow {
+  color: var(--mid-green);
+  font-size: 1.4rem;
+  opacity: .5;
+  transition: opacity .18s ease, transform .18s ease;
+}
+.card:hover .card-arrow {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text2);
+  font-size: .82rem;
+  border-top: 1px solid var(--border);
+  max-width: 900px;
+  margin: 0 auto;
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-eyebrow">Cedar Valley USD · Spring 2026</div>
+    <h1 class="header-title">ELL Data Analysis Reports</h1>
+    <p class="header-sub">Sample reports demonstrating data-driven analysis for English Language Learner programs, grouping strategies, and individualized student plans.</p>
+  </div>
+</header>
+
+<main class="main">
+  <div class="cards">
+
+    <a class="card" href="Data%20Analysis%20Test%20Reports/ELL_Program_Report.html">
+      <div>
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.6rem;">
+          <div class="card-icon green">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-8 4 4 5-6"/></svg>
+          </div>
+          <div class="card-label">Program Analysis</div>
+        </div>
+        <div class="card-desc">District-wide ELL program overview with enrollment trends, proficiency distributions, and growth metrics across grade levels.</div>
+      </div>
+      <div class="card-arrow">&rarr;</div>
+    </a>
+
+    <a class="card" href="Data%20Analysis%20Test%20Reports/ELL_Grouping_Plan.html">
+      <div>
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.6rem;">
+          <div class="card-icon amber">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          </div>
+          <div class="card-label">Instructional Grouping Plan</div>
+        </div>
+        <div class="card-desc">Tiered grouping recommendations based on proficiency data, with suggested instructional strategies and resource allocation for each group.</div>
+      </div>
+      <div class="card-arrow">&rarr;</div>
+    </a>
+
+    <a class="card" href="Data%20Analysis%20Test%20Reports/ELL_Individual_Plans.html">
+      <div>
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.6rem;">
+          <div class="card-icon blue">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="card-label">Individual Student Plans</div>
+        </div>
+        <div class="card-desc">Personalized learning plans for individual students with targeted goals, accommodations, and progress monitoring benchmarks.</div>
+      </div>
+      <div class="card-arrow">&rarr;</div>
+    </a>
+
+  </div>
+</main>
+
+<div class="footer">
+  Bamboo &mdash; Flashlight360 Sample Reports
+</div>
+
+</body>
+</html>
