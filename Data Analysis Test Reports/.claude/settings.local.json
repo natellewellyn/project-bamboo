@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import openpyxl; print\\(''openpyxl ok'', openpyxl.__version__\\)\")",
+      "Bash(pip3 install:*)",
+      "Bash(python3 -c \"import openpyxl; print\\(''ok'', openpyxl.__version__\\)\")",
+      "Bash(python3 generate_report.py)",
+      "Bash(python3 -c \":*)",
+      "Bash(open \"/Users/nathanllewellyn/Projects/Flashlight/bamboo/Data Analysis Test Reports/ELL_Program_Report.html\")",
+      "Bash(open ELL_Program_Report.html)"
+    ]
+  }
+}
